@@ -1,0 +1,75 @@
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe.config
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.pdb
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csprojResolveAssemblyReference.cache
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.g.cs
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\App.g.cs
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.cache
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.lref
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.baml
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.g.resources
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.Properties.Resources.resources
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.GenerateResource.Cache
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.exe
+c:\users\seto_\documents\visual studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.pdb
+C:\Users\seto_\Documents\Visual Studio 2017\Projects\ColorPicker2\ColorPicker2\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe.config
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.pdb
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.g.cs
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\App.g.cs
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.cache
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.lref
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.baml
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.g.resources
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.Properties.Resources.resources
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.GenerateResource.Cache
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.exe
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.pdb
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csprojAssemblyReference.cache
+C:\Users\Yuuta\Desktop\ディベロップメント\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.CoreCompileInputs.cache
+H:\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe.config
+H:\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe
+H:\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.pdb
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csprojAssemblyReference.cache
+H:\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.g.cs
+H:\ColorPicker2\ColorPicker2\obj\Debug\App.g.cs
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.cache
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.lref
+H:\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.baml
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.g.resources
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.Properties.Resources.resources
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.GenerateResource.cache
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.CoreCompileInputs.cache
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.exe
+H:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.pdb
+J:\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe.config
+J:\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe
+J:\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.pdb
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csprojAssemblyReference.cache
+J:\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.g.cs
+J:\ColorPicker2\ColorPicker2\obj\Debug\App.g.cs
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.cache
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.lref
+J:\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.baml
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.g.resources
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.Properties.Resources.resources
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.GenerateResource.cache
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.CoreCompileInputs.cache
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.exe
+J:\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.pdb
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe.config
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.pdb
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csprojAssemblyReference.cache
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.g.cs
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\App.g.cs
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.cache
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2_MarkupCompile.lref
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\MainWindow.baml
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.g.resources
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.Properties.Resources.resources
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.GenerateResource.cache
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.CoreCompileInputs.cache
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.exe
+C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.pdb
