@@ -350,6 +350,16 @@ namespace ColorPicker2 {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("WhiteToBlack_TAG");
                 BeginStoryboard(storyBoard);
             }
+
+            if (_color < 0.60) {
+                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("BlackToWhite_OptionRect");
+                BeginStoryboard(storyBoard);
+            }
+
+            if (_color >= 0.60) {
+                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("WhiteToBlack_OptionRect");
+                BeginStoryboard(storyBoard);
+            }
         }
 
         private void Copy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {

@@ -201,6 +201,86 @@
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="WhiteToBlack_OptionRect">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OptionRect_White">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=OptionRect_White}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OptionRect_Black">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=OptionRect_Black}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="BlackToWhite_OptionRect">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OptionRect_White">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=OptionRect_White}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OptionRect_Black">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=OptionRect_Black}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Option_Over">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OptionRect_Back">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=OptionRect_Back}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Option_Leave">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="OptionRect_Back">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=OptionRect_Back}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="CloseBtn">
@@ -214,6 +294,12 @@
         </EventTrigger>
         <EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="CloseBtn">
             <BeginStoryboard Storyboard="{StaticResource Close_Down}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="OptionBtn">
+            <BeginStoryboard x:Name="Option_Over_BeginStoryboard1" Storyboard="{StaticResource Option_Over}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="OptionBtn">
+            <BeginStoryboard x:Name="Close_Leave_BeginStoryboard1" Storyboard="{StaticResource Option_Leave}"/>
         </EventTrigger>
     </Window.Triggers>
     <Grid Margin="0">
@@ -263,7 +349,37 @@
                 <ImageBrush ImageSource="Res/CloseBtn_Black.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Button x:Name="CloseBtn" Click="Close_Click" Margin="220,10,20,160" Background="#00000000" BorderBrush="#00000000" Foreground="#00000000" OpacityMask="#00000000"/>
+        <Button x:Name="CloseBtn" Click="Close_Click" Margin="0,10,20.4,0" Background="#00000000" BorderBrush="#00000000" Foreground="#00000000" OpacityMask="#00000000" HorizontalAlignment="Right" Width="30" Height="30" VerticalAlignment="Top"/>
         <Rectangle x:Name="InitializeColorRect" Loaded="InitializeColorRect_Loaded" Height="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="0" />
+        <Rectangle x:Name="OptionRect_Back" HorizontalAlignment="Right" Height="30" Margin="0,150,230.4,0" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Opacity="0" Fill="#4C000000"/>
+        <Rectangle x:Name="OptionRect_White" Opacity="0" HorizontalAlignment="Left" Height="30" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Margin="10,150,0,0">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Res/CloseBtn_White.png" Stretch="UniformToFill">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="45" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="OptionRect_Black" Opacity="0" HorizontalAlignment="Left" Height="30" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Margin="10,150,0,0">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Res/CloseBtn_Black.png" Stretch="UniformToFill">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="45" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button x:Name="OptionBtn" Margin="10,150,0,0" Background="#00000000" BorderBrush="#00000000" Foreground="#00000000" OpacityMask="#00000000" HorizontalAlignment="Left" Width="30" Height="30" VerticalAlignment="Top"/>
     </Grid>
 </Window>
