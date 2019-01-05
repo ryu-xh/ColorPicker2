@@ -289,6 +289,7 @@ namespace ColorPicker2 {
             BackRect.Fill = new SolidColorBrush(System.Windows.Media.Color.FromRgb(_R, _G, _B));
             CopyShadow.Fill = BackRect.Fill;
             CloseRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 255, 255, 255));
+            OptionRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 255, 255, 255));
             ColorCode.Text = Insertspace(BitConverter.ToString(hex).Replace("-", string.Empty));
             
 
@@ -303,6 +304,7 @@ namespace ColorPicker2 {
                 ColorCode.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(TextRGBColor.R, TextRGBColor.G, TextRGBColor.B));
                 CopyShadow.Fill = ColorCode.Foreground;
                 CloseRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
+                OptionRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
 
             } else ColorCode.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 255, 255));
 
@@ -453,6 +455,21 @@ namespace ColorPicker2 {
                 }
                 return bitmap.GetPixel(0, 0);
             }
+        }
+
+        bool isOption = false;
+        private void OptionBtn_Click(object sender, RoutedEventArgs e) {
+            if (isOption) {
+                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Option_Close");
+                BeginStoryboard(storyBoard);
+                this.Height = 200;
+            } else {
+                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Option_Open");
+                BeginStoryboard(storyBoard);
+                this.Height = 300;
+            }
+
+            isOption = !isOption;
         }
     }
 
