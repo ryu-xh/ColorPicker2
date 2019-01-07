@@ -230,8 +230,7 @@ namespace ColorPicker2 {
             return rgbColor;
         }
 
-        private double RgbToL(int R, int G, int B)
-        {
+        private double RgbToL(int R, int G, int B) {
             return (Math.Sqrt((0.299 * Math.Pow(R, 2)) + (0.587 * Math.Pow(G, 2)) + (0.114 * Math.Pow(B, 2)))) / 255;
         }
         #endregion
@@ -271,9 +270,9 @@ namespace ColorPicker2 {
             Startup();
         }
 
-        private void DragRect_MouseDown(object sender, MouseButtonEventArgs e) {
+        private void DragRect_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             base.OnMouseLeftButtonDown(e);
-            
+
             this.DragMove();
         }
 
@@ -291,7 +290,7 @@ namespace ColorPicker2 {
             CloseRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 255, 255, 255));
             OptionRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 255, 255, 255));
             ColorCode.Text = Insertspace(BitConverter.ToString(hex).Replace("-", string.Empty));
-            
+
 
             var hsbColor = RgbToHsb(System.Windows.Media.Color.FromRgb(_R, _G, _B));
 
@@ -303,10 +302,14 @@ namespace ColorPicker2 {
                 var TextRGBColor = HsbToRgb(TextColor);
                 ColorCode.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(TextRGBColor.R, TextRGBColor.G, TextRGBColor.B));
                 CopyShadow.Fill = ColorCode.Foreground;
-                CloseRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
-                OptionRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
+
 
             } else ColorCode.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 255, 255));
+
+            if (L >= 0.55) {
+                CloseRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
+                OptionRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
+            }
 
             double colorL;
 
@@ -327,54 +330,45 @@ namespace ColorPicker2 {
             return newstr;
         }
 
-        private void SetImgColor(double _prevL, double _color)
-        {
-            if (_color <= 0.80)
-            {
+        private void SetImgColor(double _prevL, double _color) {
+            if (_color <= 0.80) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("BlackToWhite_CloseRect");
                 BeginStoryboard(storyBoard);
             }
 
-            if (_color > 0.80)
-            {
+            if (_color > 0.80) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("WhiteToBlack_CloseRect");
                 BeginStoryboard(storyBoard);
             }
 
-            if (_color < 0.70)
-            {
+            if (_color < 0.55) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("BlackToWhite_TAG");
                 BeginStoryboard(storyBoard);
             }
 
-            if (_color >= 0.70)
-            {
+            if (_color >= 0.55) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("WhiteToBlack_TAG");
                 BeginStoryboard(storyBoard);
             }
 
-            if (_color < 0.60) {
+            if (_color < 0.55) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("BlackToWhite_OptionRect");
                 BeginStoryboard(storyBoard);
             }
 
-            if (_color >= 0.60) {
+            if (_color >= 0.55) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("WhiteToBlack_OptionRect");
                 BeginStoryboard(storyBoard);
             }
         }
 
         private void Copy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
-            Clipboard.SetText("#" + ColorCode.Text.Replace("|",""));
-        }
-
-        private void Close_Click(object sender, RoutedEventArgs e) {
-            this.Close();
+            Clipboard.SetText("#" + ColorCode.Text.Replace("|", ""));
         }
 
         bool pXKey;
         private void Main_KeyDown(object sender, KeyEventArgs e) {
-            if(e.Key == Key.C) {
+            if (e.Key == Key.C) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Copied");
                 BeginStoryboard(storyBoard);
                 Copy_MouseLeftButtonDown(sender, null);
@@ -386,28 +380,28 @@ namespace ColorPicker2 {
                 SetColor(c.R, c.G, c.B);
             }
 
-                // if(e.Key == Key.A)
-                //     SetColor(0x5A, 0x80, 0x9E);
-                // 
-                // if (e.Key == Key.S)
-                //     SetColor(0x7C, 0x79, 0xA2);
-                // 
-                // if (e.Key == Key.D)
-                //     SetColor(0xF5, 0x7D, 0x7C);
-                // 
-                // if (e.Key == Key.F)
-                //     SetColor(0xFF, 0xC1, 0xA6);
-                // 
-                // if (e.Key == Key.G)
-                //     SetColor(0x6C, 0xC2, 0xBD);
-            }
+            // if(e.Key == Key.A)
+            //     SetColor(0x5A, 0x80, 0x9E);
+            // 
+            // if (e.Key == Key.S)
+            //     SetColor(0x7C, 0x79, 0xA2);
+            // 
+            // if (e.Key == Key.D)
+            //     SetColor(0xF5, 0x7D, 0x7C);
+            // 
+            // if (e.Key == Key.F)
+            //     SetColor(0xFF, 0xC1, 0xA6);
+            // 
+            // if (e.Key == Key.G)
+            //     SetColor(0x6C, 0xC2, 0xBD);
+        }
 
         private void InitializeColorRect_Loaded(object sender, RoutedEventArgs e) {
             byte _r, _g, _b;
             _r = Settings.Default.SaveR;
             _g = Settings.Default.SaveG;
             _b = Settings.Default.SaveB;
-            
+
             SetColor(_r, _g, _b);
         }
 
@@ -457,20 +451,25 @@ namespace ColorPicker2 {
             }
         }
 
-        bool isOption = false;
-        private void OptionBtn_Click(object sender, RoutedEventArgs e) {
+        bool isOption = false;        
+        private void OptionBtn_Click(object sender, MouseButtonEventArgs e) {
             if (isOption) {
+                this.Height = 200;
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Option_Close");
                 BeginStoryboard(storyBoard);
-                this.Height = 200;
+
             } else {
+                this.Height = 300;
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Option_Open");
                 BeginStoryboard(storyBoard);
-                this.Height = 300;
+
             }
 
             isOption = !isOption;
         }
-    }
 
+        private void CloseBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+            this.Close();
+        }
+    }
 }

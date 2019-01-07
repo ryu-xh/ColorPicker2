@@ -118,5 +118,14 @@
   <ItemGroup>
     <Resource Include="Res\pX2p.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\settings_black_36pt_1x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\info_black_36pt_1x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\help_black_36pt_1x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
