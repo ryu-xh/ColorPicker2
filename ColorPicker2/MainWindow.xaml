@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorPicker2"
         mc:Ignorable="d"
-        Title="ColorPicker2" Height="255" Width="270" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" Loaded="Main_Loaded" KeyDown="Main_KeyDown" KeyUp="Main_KeyUp">
+        Title="ColorPicker2" Height="255" Width="270" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" Loaded="Main_Loaded" KeyDown="Main_KeyDown" KeyUp="Main_KeyUp" Activated="Main_Activated" Deactivated="Main_Deactivated">
     <Window.Resources>
         <Storyboard x:Key="Close_Over">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CloseRect_Back">
@@ -313,52 +313,110 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="SettingGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=SettingGrid}">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="SettingButton">
+                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=SettingButton}">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
                 <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="10,200,0,0">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
             </ThicknessAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="HelpGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=HelpGrid}">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="HelpButton">
+                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=HelpButton}">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="{Binding Margin, ElementName=HelpGrid}">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="{Binding Margin, ElementName=HelpButton}">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
                 <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="70,200,0,0">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
             </ThicknessAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="InfoGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=InfoGrid}">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="InfoButton">
+                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=InfoButton}">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="{Binding Margin, ElementName=InfoGrid}">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="{Binding Margin, ElementName=InfoButton}">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
                 <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="130,200,0,0">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
             </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="SettingButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HelpButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="InfoButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="SettingButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding RenderTransform.Children[2].Angle, ElementName=SettingButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="HelpButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding RenderTransform.Children[2].Angle, ElementName=HelpButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="{Binding RenderTransform.Children[2].Angle, ElementName=HelpButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="InfoButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding RenderTransform.Children[2].Angle, ElementName=InfoButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="{Binding RenderTransform.Children[2].Angle, ElementName=InfoButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Option_Close">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="OptionRect_White">
@@ -402,52 +460,174 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="SettingGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=SettingGrid}">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="SettingButton">
+                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=SettingButton}">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
                 <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="10,130,0,0">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
             </ThicknessAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="HelpGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=HelpGrid}">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="HelpButton">
+                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=HelpButton}">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="{Binding Margin, ElementName=HelpGrid}">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="{Binding Margin, ElementName=HelpButton}">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="70,130,0,0">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="10,130,0,0">
                     <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingThicknessKeyFrame.EasingFunction>
-                </EasingThicknessKeyFrame>
-            </ThicknessAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="InfoGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=InfoGrid}">
-                    <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingThicknessKeyFrame.EasingFunction>
-                </EasingThicknessKeyFrame>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="{Binding Margin, ElementName=InfoGrid}">
-                    <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
-                    </EasingThicknessKeyFrame.EasingFunction>
-                </EasingThicknessKeyFrame>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="130,130,0,0">
-                    <EasingThicknessKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseOut"/>
+                        <CubicEase EasingMode="EaseInOut"/>
                     </EasingThicknessKeyFrame.EasingFunction>
                 </EasingThicknessKeyFrame>
             </ThicknessAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="InfoButton">
+                <EasingThicknessKeyFrame KeyTime="0" Value="{Binding Margin, ElementName=InfoButton}">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="{Binding Margin, ElementName=InfoButton}">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.5" Value="10,130,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="SettingButton">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HelpButton">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="InfoButton">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="SettingButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding RenderTransform.Children[2].Angle, ElementName=SettingButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-270">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="HelpButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding RenderTransform.Children[2].Angle, ElementName=HelpButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="{Binding RenderTransform.Children[2].Angle, ElementName=HelpButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-270">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="InfoButton">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding RenderTransform.Children[2].Angle, ElementName=InfoButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="{Binding RenderTransform.Children[2].Angle, ElementName=InfoButton}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-270">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Activated">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="BackRect">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=BackRect}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Deactivated">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Effect).(DropShadowEffect.Opacity)" Storyboard.TargetName="BackRect">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="BackRect">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=BackRect}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.8">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
@@ -457,6 +637,8 @@
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard x:Name="Option_Open_BeginStoryboard" Storyboard="{StaticResource Option_Open}"/>
             <BeginStoryboard x:Name="Option_Close_BeginStoryboard" Storyboard="{StaticResource Option_Close}"/>
+            <BeginStoryboard Storyboard="{StaticResource Deactivated}"/>
+            <BeginStoryboard x:Name="Activated_BeginStoryboard" Storyboard="{StaticResource Activated}"/>
         </EventTrigger>
         <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="OptionBtn">
             <BeginStoryboard x:Name="Option_Over_BeginStoryboard" Storyboard="{StaticResource Option_Over}"/>
@@ -472,94 +654,73 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Margin="0">
-        <Grid x:Name="SettingGrid" Margin="10,200,0,0" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.5,0.5">
-            <Grid.RenderTransform>
+        <local:IconButton x:Name="InfoButton" HorizontalAlignment="Left" Height="50" Margin="130,200,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+            <local:IconButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Grid.RenderTransform>
-            <Rectangle x:Name="SettingRect_Back" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" Fill="White">
-                <Rectangle.Effect>
-                    <DropShadowEffect BlurRadius="8" Opacity="0.3" ShadowDepth="0"/>
-                </Rectangle.Effect>
-            </Rectangle>
-            <Rectangle x:Name="SettingRect" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="Res/settings_black_36pt_1x.png">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.6" ScaleY="0.6"/>
-                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-        </Grid>
-        <Grid x:Name="HelpGrid" Margin="70,200,0,0" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.5,0.5">
-            <Grid.RenderTransform>
+            </local:IconButton.RenderTransform>
+            <local:IconButton.Icon>
+                <ImageBrush ImageSource="Res/info_black_36pt_1x.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </local:IconButton.Icon>
+        </local:IconButton>
+        <local:IconButton x:Name="HelpButton" HorizontalAlignment="Left" Height="50" Margin="70,200,0,0" VerticalAlignment="Top" Width="50" MouseLeftButtonDown="HelpButton_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.5">
+            <local:IconButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Grid.RenderTransform>
-            <Rectangle x:Name="HelpRect_Back" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" Fill="White">
-                <Rectangle.Effect>
-                    <DropShadowEffect BlurRadius="8" Opacity="0.3" ShadowDepth="0"/>
-                </Rectangle.Effect>
-            </Rectangle>
-            <Rectangle x:Name="HelpRect" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="Res/help_black_36pt_1x.png">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.6" ScaleY="0.6"/>
-                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-        </Grid>
-        <Grid x:Name="InfoGrid" Margin="130,200,0,0" HorizontalAlignment="Left" Width="50" Height="50" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
-            <Grid.RenderTransform>
+            </local:IconButton.RenderTransform>
+            <local:IconButton.Icon>
+                <ImageBrush ImageSource="Res/help_black_36pt_1x.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </local:IconButton.Icon>
+        </local:IconButton>
+        <local:IconButton x:Name="SettingButton" HorizontalAlignment="Left" Height="50" Margin="10,200,0,0" VerticalAlignment="Top" Width="50" MouseLeftButtonDown="SettingButton_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.5">
+            <local:IconButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Grid.RenderTransform>
-            <Rectangle x:Name="InfoRect_Back" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" Fill="White">
-                <Rectangle.Effect>
-                    <DropShadowEffect BlurRadius="8" Opacity="0.3" ShadowDepth="0"/>
-                </Rectangle.Effect>
-            </Rectangle>
-            <Rectangle x:Name="InfoRect" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="Res/info_black_36pt_1x.png">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.6" ScaleY="0.6"/>
-                                <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                                <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-        </Grid>
-        <Rectangle x:Name="BackRect" Fill="#f8a9af" HorizontalAlignment="Left" Height="180" Margin="5,5,0,0" Stroke="Black" VerticalAlignment="Top" Width="250" StrokeThickness="0" RadiusX="7" RadiusY="7">
+            </local:IconButton.RenderTransform>
+            <local:IconButton.Icon>
+                <ImageBrush ImageSource="Res/settings_black_36pt_1x.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </local:IconButton.Icon>
+        </local:IconButton>
+        <Rectangle x:Name="BackRect" Fill="#f8a9af" HorizontalAlignment="Left" Height="180" Margin="5,5,0,0" VerticalAlignment="Top" Width="250" RadiusX="7" RadiusY="7" Stroke="White" StrokeThickness="0">
             <Rectangle.Effect>
                 <DropShadowEffect ShadowDepth="0" Opacity="0.3" BlurRadius="10"/>
             </Rectangle.Effect>
@@ -569,22 +730,24 @@
         <TextBlock x:Name="ColorCode" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="/ColorPicker2;component/Res/#Rubik Medium" FontSize="40" TextAlignment="Center" Padding="0,67,0,0" TextOptions.TextHintingMode="Animated" Width="250" Height="180" Foreground="White" Text="F|8|A|9|A|F" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
 
         <Rectangle x:Name="DragRect" Margin="5,5,15,0" Fill="#00000000" Height="180" VerticalAlignment="Top" MouseLeftButtonDown="DragRect_MouseLeftButtonDown" />
-        <Rectangle x:Name="CopyShadow" HorizontalAlignment="Left" Height="50" Margin="215,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" Fill="#FFF8A9AF">
-            <Rectangle.Effect>
-                <DropShadowEffect BlurRadius="8" Opacity="0.3" ShadowDepth="0"/>
-            </Rectangle.Effect>
-        </Rectangle>
-        <Rectangle x:Name="CopyWhite" HorizontalAlignment="Left" Height="50" Margin="215,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" Fill="White" Opacity="0"/>
-        <Rectangle x:Name="Copy" HorizontalAlignment="Left" Height="50" Margin="215,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" MouseLeftButtonDown="Copy_MouseLeftButtonDown">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Res/CopyBtn.png" Stretch="UniformToFill"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="Copied" HorizontalAlignment="Left" Height="50" Margin="215,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" MouseLeftButtonDown="Copy_MouseLeftButtonDown" Opacity="0">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Res/Copied.png" Stretch="UniformToFill"/>
-            </Rectangle.Fill>
-        </Rectangle>
+        <Grid x:Name="CopyGrid" Margin="215,145,0,0" HorizontalAlignment="Left" Width="50" Height="50" VerticalAlignment="Top">
+            <Rectangle x:Name="CopyShadow" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" Fill="#FFF8A9AF">
+                <Rectangle.Effect>
+                    <DropShadowEffect BlurRadius="8" Opacity="0.3" ShadowDepth="0"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Rectangle x:Name="CopyWhite" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" Fill="White" Opacity="0"/>
+            <Rectangle x:Name="Copy" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" MouseLeftButtonDown="Copy_MouseLeftButtonDown">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Res/CopyBtn.png" Stretch="UniformToFill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="Copied" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" RadiusX="25" RadiusY="25" StrokeThickness="0" MouseLeftButtonDown="Copy_MouseLeftButtonDown" Opacity="0">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Res/Copied.png" Stretch="UniformToFill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
         <Rectangle x:Name="PickMessageRect" Margin="5,5,15.4,155" StrokeThickness="0" MouseDown="PickMessageRect_MouseDown" Visibility="Hidden" >
             <Rectangle.Fill>
                 <ImageBrush ImageSource="Res/pX2p.png"/>
@@ -649,5 +812,6 @@
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle x:Name="OptionBtn" HorizontalAlignment="Left" Height="30" Margin="10,150,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Fill="#00000000" MouseDown="OptionBtn_Click"/>
+
     </Grid>
 </Window>

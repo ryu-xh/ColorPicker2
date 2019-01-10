@@ -309,7 +309,7 @@ namespace ColorPicker2 {
             if (L >= 0.55) {
                 CloseRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
                 OptionRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
-            }
+            } 
 
             double colorL;
 
@@ -470,6 +470,26 @@ namespace ColorPicker2 {
 
         private void CloseBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             this.Close();
+            settingWindow.Close();
+        }
+
+        SettingWindow settingWindow = new SettingWindow();
+        private void SettingButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+            settingWindow.Show();
+        }
+
+        private void HelpButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+
+        }
+
+        private void Main_Activated(object sender, EventArgs e) {
+            System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Activated");
+            BeginStoryboard(storyBoard);
+        }
+
+        private void Main_Deactivated(object sender, EventArgs e) {
+            System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Deactivated");
+            BeginStoryboard(storyBoard);
         }
     }
 }
