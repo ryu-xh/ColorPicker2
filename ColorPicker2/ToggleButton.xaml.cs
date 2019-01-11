@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,34 +23,44 @@ namespace ColorPicker2 {
             InitializeComponent();
         }
 
-        bool isEnable = false;
+        private bool IsValue = false;
         private void ToggleRect_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
-            PlayAnimation();
-
-            isEnable = !isEnable;
+            IsChecked = !IsChecked;
         }
 
         public Boolean IsChecked {
-            get { return isEnable; }
-            set { isEnable = value; }
+            get { return IsValue; }
+            set {
+                IsValue = value;
+                PlayAnimation();
+
+                ValueChanged?.Invoke(this, null);
+            }
         }
 
 
         private void PlayAnimation() {
-            if (isEnable) {
-                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Disable");
+            if (IsValue) {
+                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Enable");
                 BeginStoryboard(storyBoard);
             } else {
-                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Enable");
+                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Disable");
                 BeginStoryboard(storyBoard);
             }
         }
 
         private void ToggleControl_Loaded(object sender, RoutedEventArgs e) {
-            if (isEnable) {
+            if (IsValue) {
                 ColorRect.Opacity = 100;
                 rectangle.Margin = new Thickness(20, 4, 4, 4);
             }
+        }
+
+
+        public event RoutedEventHandler ValueChanged;
+        
+        public virtual void Value_Changed(object sender, RoutedEventArgs args) {
+            ValueChanged?.Invoke(this, args);
         }
     }
 }

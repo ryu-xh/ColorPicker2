@@ -318,6 +318,10 @@ namespace ColorPicker2 {
             SetImgColor(prevL, colorL);
 
             prevL = colorL;
+
+            if (isAutoCopy) {
+                CopyCode();
+            }
         }
 
         private string Insertspace(string str) {
@@ -362,8 +366,12 @@ namespace ColorPicker2 {
             }
         }
 
-        private void Copy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+        private void CopyCode() {
             Clipboard.SetText("#" + ColorCode.Text.Replace("|", ""));
+        }
+
+        private void Copy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+            CopyCode();
         }
 
         bool pXKey;
@@ -434,14 +442,13 @@ namespace ColorPicker2 {
         [DllImport("user32.dll")]
         public static extern bool GetCursorPos(out System.Drawing.Point lpPoint);
         public static System.Drawing.Point GetCursorPosition() {
-            System.Drawing.Point lpPoint;
-            GetCursorPos(out lpPoint);
+            GetCursorPos(out System.Drawing.Point lpPoint);
 
             return lpPoint;
         }
 
         private System.Drawing.Color GetPixel(System.Drawing.Point _position) {
-            Console.WriteLine("X : " + _position.X + ", Y : " + _position.Y);
+            // Console.WriteLine("X : " + _position.X + ", Y : " + _position.Y);
             System.Drawing.Point position = new System.Drawing.Point(Convert.ToInt32(_position.X), Convert.ToInt32(_position.Y));
             using (var bitmap = new Bitmap(1, 1)) {
                 using (var graphics = Graphics.FromImage(bitmap)) {
@@ -475,7 +482,21 @@ namespace ColorPicker2 {
 
         SettingWindow settingWindow = new SettingWindow();
         private void SettingButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+            settingWindow.SettingApply += SettingApply;
             settingWindow.Show();
+        }
+
+        bool isAutoCopy;
+        bool isHideCopyButton;
+        private void SettingApply() {
+            isAutoCopy = Properties.Settings.Default.AutoCopy;
+            isHideCopyButton = Properties.Settings.Default.HideCopyButton;
+
+            if (isHideCopyButton) {
+                CopyGrid.Visibility = Visibility.Hidden;
+            } else {
+                CopyGrid.Visibility = Visibility.Visible;
+            }
         }
 
         private void HelpButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {

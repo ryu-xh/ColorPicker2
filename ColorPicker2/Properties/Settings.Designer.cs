@@ -70,5 +70,41 @@ namespace ColorPicker2.Properties {
                 this["pXKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoCopy {
+            get {
+                return ((bool)(this["AutoCopy"]));
+            }
+            set {
+                this["AutoCopy"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool HideCopyButton {
+            get {
+                return ((bool)(this["HideCopyButton"]));
+            }
+            set {
+                this["HideCopyButton"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public byte Format {
+            get {
+                return ((byte)(this["Format"]));
+            }
+            set {
+                this["Format"] = value;
+            }
+        }
     }
 }

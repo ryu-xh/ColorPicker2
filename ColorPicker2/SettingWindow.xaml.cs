@@ -33,5 +33,27 @@ namespace ColorPicker2
 
             this.DragMove();
         }
+
+        private void AutoCopyToggle_ValueChanged(object sender, RoutedEventArgs e) {
+            Properties.Settings.Default.AutoCopy = AutoCopyToggle.IsChecked;
+
+            Apply();
+        }
+
+        private void HideCopyToggle_ValueChanged(object sender, RoutedEventArgs e) {
+            Properties.Settings.Default.HideCopyButton = HideCopyToggle.IsChecked;
+
+            Apply();
+        }
+
+        private void Apply() {
+            Properties.Settings.Default.Save();
+            SettingApply();
+        }
+
+        // 대리자
+        public delegate void SettingApplyHandler();
+        // 이벤트 처리기
+        public event SettingApplyHandler SettingApply;
     }
 }
