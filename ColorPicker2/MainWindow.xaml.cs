@@ -252,6 +252,14 @@ namespace ColorPicker2 {
                 PickMessageRect.Visibility = Visibility.Visible;
             }
 
+            System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("CopyButtonInvisible");
+            BeginStoryboard(storyBoard);
+
+            storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("CopyButtonVisible");
+            BeginStoryboard(storyBoard);
+
+            SettingApply();
+
             // SetColor(248, 169, 175);
             // SetColor(10, 167, 146);
             // SetColor(255, 231, 86);
@@ -493,9 +501,11 @@ namespace ColorPicker2 {
             isHideCopyButton = Properties.Settings.Default.HideCopyButton;
 
             if (isHideCopyButton) {
-                CopyGrid.Visibility = Visibility.Hidden;
+                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("CopyButtonInvisible");
+                BeginStoryboard(storyBoard);
             } else {
-                CopyGrid.Visibility = Visibility.Visible;
+                System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("CopyButtonVisible");
+                BeginStoryboard(storyBoard);
             }
         }
 

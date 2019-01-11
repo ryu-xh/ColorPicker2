@@ -629,6 +629,42 @@
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="CopyButtonInvisible">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CopyGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=CopyGrid}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="Main">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Path=Width, ElementName=Main}"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="{Binding Path=Width, ElementName=Main}"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="260"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CopyButtonVisible">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CopyGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=CopyGrid}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="Main">
+                <EasingDoubleKeyFrame KeyTime="0" Value="270"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown" SourceName="Copied">
@@ -753,18 +789,20 @@
                 <ImageBrush ImageSource="Res/pX2p.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle x:Name="CloseRect_Back" HorizontalAlignment="Right" Height="30" Margin="0,10,20,0" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Opacity="0" Fill="#4C000000"/>
-        <Rectangle x:Name="CloseRect_White" Opacity="0" HorizontalAlignment="Right" Height="30" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Margin="0,10,20,0">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Res/CloseBtn_White.png" Stretch="UniformToFill"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="CloseRect_Black" Opacity="0" HorizontalAlignment="Right" Height="30" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Margin="0,10,20,0">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Res/CloseBtn_Black.png" Stretch="UniformToFill"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="CloseBtn" HorizontalAlignment="Left" Height="30" Margin="220,10,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Fill="#00000000" MouseLeftButtonDown="CloseBtn_MouseLeftButtonDown"/>
+        <Grid x:Name="CloseGrid" Margin="220,10,0,0" HorizontalAlignment="Left" Width="30" Height="30" VerticalAlignment="Top">
+            <Rectangle x:Name="CloseRect_Back" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" Opacity="0" Fill="#4C000000"/>
+            <Rectangle x:Name="CloseRect_White" Opacity="0" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Res/CloseBtn_White.png" Stretch="UniformToFill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="CloseRect_Black" Opacity="0" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Res/CloseBtn_Black.png" Stretch="UniformToFill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="CloseBtn" Stroke="Black" StrokeThickness="0" Fill="#00000000" MouseLeftButtonDown="CloseBtn_MouseLeftButtonDown"/>
+        </Grid>
         <Rectangle x:Name="InitializeColorRect" Loaded="InitializeColorRect_Loaded" Height="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="0" />
         <Rectangle x:Name="OptionRect_Back" HorizontalAlignment="Right" Height="30" Margin="0,150,230.4,0" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Opacity="0" Fill="#4C000000"/>
         <Rectangle x:Name="OptionRect_White" Opacity="0" HorizontalAlignment="Left" Height="30" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Margin="10,150,0,0" RenderTransformOrigin="0.5,0.5">

@@ -22,6 +22,15 @@ namespace ColorPicker2
         public SettingWindow()
         {
             InitializeComponent();
+            Initialize();
+        }
+
+        bool isInit = false;
+        private void Initialize() {
+            AutoCopyToggle.IsChecked = Properties.Settings.Default.AutoCopy;
+            HideCopyToggle.IsChecked = Properties.Settings.Default.HideCopyButton;
+
+            isInit = true;
         }
 
         private void CloseBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
@@ -37,13 +46,15 @@ namespace ColorPicker2
         private void AutoCopyToggle_ValueChanged(object sender, RoutedEventArgs e) {
             Properties.Settings.Default.AutoCopy = AutoCopyToggle.IsChecked;
 
-            Apply();
+            if(isInit)
+                Apply();
         }
 
         private void HideCopyToggle_ValueChanged(object sender, RoutedEventArgs e) {
             Properties.Settings.Default.HideCopyButton = HideCopyToggle.IsChecked;
 
-            Apply();
+            if(isInit)
+                Apply();
         }
 
         private void Apply() {
