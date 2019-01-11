@@ -38,6 +38,10 @@ namespace ColorPicker2 {
             }
         }
 
+        public event RoutedEventHandler ValueChanged;
+        public virtual void Value_Changed(object sender, RoutedEventArgs args) {
+            ValueChanged?.Invoke(this, args);
+        }
 
         private void PlayAnimation() {
             if (IsValue) {
@@ -56,11 +60,5 @@ namespace ColorPicker2 {
             }
         }
 
-
-        public event RoutedEventHandler ValueChanged;
-        
-        public virtual void Value_Changed(object sender, RoutedEventArgs args) {
-            ValueChanged?.Invoke(this, args);
-        }
     }
 }

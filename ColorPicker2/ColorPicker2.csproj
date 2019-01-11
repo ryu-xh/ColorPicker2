@@ -59,6 +59,9 @@
     <Compile Include="IconButton.xaml.cs">
       <DependentUpon>IconButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ImageRadioButton.xaml.cs">
+      <DependentUpon>ImageRadioButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SettingWindow.xaml.cs">
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
@@ -66,6 +69,10 @@
       <DependentUpon>ToggleButton.xaml</DependentUpon>
     </Compile>
     <Page Include="IconButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImageRadioButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,6 +162,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Res\settingTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Hex_Active.png" />
+    <Resource Include="Res\Hex_Deactive.png" />
+    <Resource Include="Res\HSL_Active.png" />
+    <Resource Include="Res\HSL_Deactive.png" />
+    <Resource Include="Res\HSV_Active.png" />
+    <Resource Include="Res\HSV_Deactive.png" />
+    <Resource Include="Res\RGB_Active.png" />
+    <Resource Include="Res\RGB_Deactive.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

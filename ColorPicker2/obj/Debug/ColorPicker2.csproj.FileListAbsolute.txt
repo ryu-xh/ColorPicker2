@@ -95,3 +95,5 @@ E:\git\ColorPicker2\ColorPicker2\obj\Debug\ToggleButton.baml
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\IconButton.g.cs
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\IconButton.baml
+E:\git\ColorPicker2\ColorPicker2\obj\Debug\ImageRadioButton.g.cs
+E:\git\ColorPicker2\ColorPicker2\obj\Debug\ImageRadioButton.baml

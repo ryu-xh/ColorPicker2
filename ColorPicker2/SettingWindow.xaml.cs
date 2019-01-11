@@ -30,6 +30,23 @@ namespace ColorPicker2
             AutoCopyToggle.IsChecked = Properties.Settings.Default.AutoCopy;
             HideCopyToggle.IsChecked = Properties.Settings.Default.HideCopyButton;
 
+            formatValue = Properties.Settings.Default.Format;
+
+            switch (formatValue) {
+                case 0:
+                    HexRadioButton.IsChecked = true;
+                    break;
+                case 1:
+                    RGBRadioButton.IsChecked = true;
+                    break;
+                case 2:
+                    HSVRadioButton.IsChecked = true;
+                    break;
+                case 3:
+                    HSLRadioButton.IsChecked = true;
+                    break;
+            }
+
             isInit = true;
         }
 
@@ -66,5 +83,58 @@ namespace ColorPicker2
         public delegate void SettingApplyHandler();
         // 이벤트 처리기
         public event SettingApplyHandler SettingApply;
+
+        byte formatValue = 0;
+        private void HexRadioButton_ValueChanged(object sender, RoutedEventArgs e) {
+            if (HexRadioButton.IsChecked) {
+                formatValue = 0;
+                Properties.Settings.Default.Format = formatValue;
+                RGBRadioButton.IsChecked = false;
+                HSVRadioButton.IsChecked = false;
+                HSLRadioButton.IsChecked = false;
+            }
+                
+            if (isInit)
+                Apply();
+        }
+
+        private void RGBRadioButton_ValueChanged(object sender, RoutedEventArgs e) {
+            if (RGBRadioButton.IsChecked) {
+                formatValue = 1;
+                Properties.Settings.Default.Format = formatValue;
+                HexRadioButton.IsChecked = false;
+                HSVRadioButton.IsChecked = false;
+                HSLRadioButton.IsChecked = false;
+            }
+                
+            if (isInit)
+                Apply();
+        }
+
+        private void HSVRadioButton_ValueChanged(object sender, RoutedEventArgs e) {
+            if (HSVRadioButton.IsChecked) {
+                formatValue = 2;
+                Properties.Settings.Default.Format = formatValue;
+                HexRadioButton.IsChecked = false;
+                RGBRadioButton.IsChecked = false;
+                HSLRadioButton.IsChecked = false;
+            }
+                
+            if (isInit)
+                Apply();
+        }
+
+        private void HSLRadioButton_ValueChanged(object sender, RoutedEventArgs e) {
+            if (HSLRadioButton.IsChecked) {
+                formatValue = 3;
+                Properties.Settings.Default.Format = formatValue;
+                HexRadioButton.IsChecked = false;
+                RGBRadioButton.IsChecked = false;
+                HSVRadioButton.IsChecked = false;
+            }
+
+            if (isInit)
+                Apply();
+        }
     }
 }
