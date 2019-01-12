@@ -42,119 +42,42 @@ namespace ColorPicker2 {
 
             // The Brightness of the color [0,1]
             public double B;
+        }
 
-            // The Alpha (opaqueness) of the color [0,1]
-            public double A;
+        public struct HSLColor {
+            private int _h;
+            private float _s;
+            private float _l;
+
+            public HSLColor(int h, float s, float l) {
+                this._h = h;
+                this._s = s;
+                this._l = l;
+            }
+
+            public int H {
+                get { return this._h; }
+                set { this._h = value; }
+            }
+
+            public float S {
+                get { return this._s; }
+                set { this._s = value; }
+            }
+
+            public float L {
+                get { return this._l; }
+                set { this._l = value; }
+            }
+
+            public bool Equals(HSLColor hsl) {
+                return (this.H == hsl.H) && (this.S == hsl.S) && (this.L == hsl.L);
+            }
         }
 
         #endregion
 
         #region Conversions
-        static ColorHls RgbToHls(System.Windows.Media.Color rgbColor) {
-            // Initialize result
-            var hlsColor = new ColorHls();
-
-            // Convert RGB values to percentages
-            double r = (double)rgbColor.R / 255;
-            var g = (double)rgbColor.G / 255;
-            var b = (double)rgbColor.B / 255;
-            var a = (double)rgbColor.A / 255;
-
-            // Find min and max RGB values
-            var min = Math.Min(r, Math.Min(g, b));
-            var max = Math.Max(r, Math.Max(g, b));
-            var delta = max - min;
-
-            /* If max and min are equal, that means we are dealing with 
-             * a shade of gray. So we set H and S to zero, and L to either
-             * max or min (it doesn't matter which), and  then we exit. */
-
-            //Special case: Gray
-            if (max == min) {
-                hlsColor.H = 0;
-                hlsColor.S = 0;
-                hlsColor.L = max;
-                return hlsColor;
-            }
-
-            /* If we get to this point, we know we don't have a shade of gray. */
-
-            // Set L
-            hlsColor.L = (min + max) / 2;
-
-            // Set S
-            if (hlsColor.L < 0.5) {
-                hlsColor.S = delta / (max + min);
-            } else {
-                hlsColor.S = delta / (2.0 - max - min);
-            }
-
-            // Set H
-            if (r == max) hlsColor.H = (g - b) / delta;
-            if (g == max) hlsColor.H = 2.0 + (b - r) / delta;
-            if (b == max) hlsColor.H = 4.0 + (r - g) / delta;
-            hlsColor.H *= 60;
-            if (hlsColor.H < 0) hlsColor.H += 360;
-
-            // Set A
-            hlsColor.A = a;
-
-            // Set return value
-            return hlsColor;
-
-        }
-
-        private static HsbColor RgbToHsb(System.Windows.Media.Color rgbColor) {
-            /* Hue values range between 0 and 360. All 
-             * other values range between 0 and 1. */
-
-            // Create HSB color object
-            var hsbColor = new HsbColor();
-
-            // Get RGB color component values
-            var r = Convert.ToInt32(rgbColor.R);
-            var g = Convert.ToInt32(rgbColor.G);
-            var b = Convert.ToInt32(rgbColor.B);
-            var a = Convert.ToInt32(rgbColor.A);
-
-            // Get min, max, and delta values
-            double min = Math.Min(Math.Min(r, g), b);
-            double max = Math.Max(Math.Max(r, g), b);
-            double delta = max - min;
-
-            /* Black (max = 0) is a special case. We 
-             * simply set HSB values to zero and exit. */
-
-            // Black: Set HSB and return
-            if (max == 0.0) {
-                hsbColor.H = 0.0;
-                hsbColor.S = 0.0;
-                hsbColor.B = 0.0;
-                hsbColor.A = a;
-                return hsbColor;
-            }
-
-            /* Now we process the normal case. */
-
-            // Set HSB Alpha value
-            var alpha = Convert.ToDouble(a);
-            hsbColor.A = alpha / 255;
-
-            // Set HSB Hue value
-            if (r == max) hsbColor.H = (g - b) / delta;
-            else if (g == max) hsbColor.H = 2 + (b - r) / delta;
-            else if (b == max) hsbColor.H = 4 + (r - g) / delta;
-            hsbColor.H *= 60;
-            if (hsbColor.H < 0.0) hsbColor.H += 360;
-
-            // Set other HSB values
-            hsbColor.S = delta / max;
-            hsbColor.B = max / 255;
-
-            // Set return value
-            return hsbColor;
-        }
-
         private static System.Windows.Media.Color HsbToRgb(HsbColor hsbColor) {
             // Initialize
             var rgbColor = new System.Windows.Media.Color();
@@ -164,7 +87,6 @@ namespace ColorPicker2 {
 
             // Gray: Set RGB and return
             if (hsbColor.S == 0.0) {
-                rgbColor.A = Convert.ToByte(hsbColor.A * 255);
                 rgbColor.R = Convert.ToByte(hsbColor.B * 255);
                 rgbColor.G = Convert.ToByte(hsbColor.B * 255);
                 rgbColor.B = Convert.ToByte(hsbColor.B * 255);
@@ -221,7 +143,6 @@ namespace ColorPicker2 {
             }
 
             // Set WPF Color object
-            rgbColor.A = Convert.ToByte(hsbColor.A * 255);
             rgbColor.R = Convert.ToByte(r * 255);
             rgbColor.G = Convert.ToByte(g * 255);
             rgbColor.B = Convert.ToByte(b * 255);
@@ -230,9 +151,142 @@ namespace ColorPicker2 {
             return rgbColor;
         }
 
+        static ColorHls RgbToHls(System.Windows.Media.Color rgbColor) {
+            // Initialize result
+            var hlsColor = new ColorHls();
+
+            // Convert RGB values to percentages
+            double r = (double)rgbColor.R / 255;
+            var g = (double)rgbColor.G / 255;
+            var b = (double)rgbColor.B / 255;
+            var a = (double)rgbColor.A / 255;
+
+            // Find min and max RGB values
+            var min = Math.Min(r, Math.Min(g, b));
+            var max = Math.Max(r, Math.Max(g, b));
+            var delta = max - min;
+
+            /* If max and min are equal, that means we are dealing with 
+             * a shade of gray. So we set H and S to zero, and L to either
+             * max or min (it doesn't matter which), and  then we exit. */
+
+            //Special case: Gray
+            if (max == min) {
+                hlsColor.H = 0;
+                hlsColor.S = 0;
+                hlsColor.L = max;
+                return hlsColor;
+            }
+
+            /* If we get to this point, we know we don't have a shade of gray. */
+
+            // Set L
+            hlsColor.L = (min + max) / 2;
+
+            // Set S
+            if (hlsColor.L < 0.5) {
+                hlsColor.S = delta / (max + min);
+            } else {
+                hlsColor.S = delta / (2.0 - max - min);
+            }
+
+            // Set H
+            if (r == max) hlsColor.H = (g - b) / delta;
+            if (g == max) hlsColor.H = 2.0 + (b - r) / delta;
+            if (b == max) hlsColor.H = 4.0 + (r - g) / delta;
+            hlsColor.H *= 60;
+            if (hlsColor.H < 0) hlsColor.H += 360;
+
+            // Set A
+            hlsColor.A = a;
+
+            // Set return value
+            return hlsColor;
+
+        }
+
+        private static HsbColor RgbToHsb(System.Windows.Media.Color rgbColor) {
+            HsbColor hsbColor;
+            double delta, min;
+            double h = 0, s, v;
+
+            min = Math.Min(Math.Min(rgbColor.R, rgbColor.G), rgbColor.B);
+            v = Math.Max(Math.Max(rgbColor.R, rgbColor.G), rgbColor.B);
+            delta = v - min;
+
+            if (v == 0.0)
+                s = 0;
+            else
+                s = delta / v;
+
+            if (s == 0)
+                h = 0.0;
+
+            else {
+                if (rgbColor.R == v)
+                    h = (rgbColor.G - rgbColor.B) / delta;
+                else if (rgbColor.G == v)
+                    h = 2 + (rgbColor.B - rgbColor.R) / delta;
+                else if (rgbColor.B == v)
+                    h = 4 + (rgbColor.R - rgbColor.G) / delta;
+
+                h *= 60;
+
+                if (h < 0.0)
+                    h = h + 360;
+            }
+
+            hsbColor.H = h;
+            hsbColor.S = s;
+            hsbColor.B = v / 255;
+
+            return hsbColor;
+        }
+
         private double RgbToL(int R, int G, int B) {
             return (Math.Sqrt((0.299 * Math.Pow(R, 2)) + (0.587 * Math.Pow(G, 2)) + (0.114 * Math.Pow(B, 2)))) / 255;
         }
+
+        private static HSLColor RgbToHSL(System.Windows.Media.Color rgbColor) {
+            HSLColor hsl = new HSLColor();
+
+            float r = (rgbColor.R / 255.0f);
+            float g = (rgbColor.G / 255.0f);
+            float b = (rgbColor.B / 255.0f);
+
+            float min = Math.Min(Math.Min(r, g), b);
+            float max = Math.Max(Math.Max(r, g), b);
+            float delta = max - min;
+
+            hsl.L = (max + min) / 2;
+
+            if (delta == 0) {
+                hsl.H = 0;
+                hsl.S = 0.0f;
+            } else {
+                hsl.S = (hsl.L <= 0.5) ? (delta / (max + min)) : (delta / (2 - max - min));
+
+                float hue;
+
+                if (r == max) {
+                    hue = ((g - b) / 6) / delta;
+                } else if (g == max) {
+                    hue = (1.0f / 3) + ((b - r) / 6) / delta;
+                } else {
+                    hue = (2.0f / 3) + ((r - g) / 6) / delta;
+                }
+
+                if (hue < 0)
+                    hue += 1;
+                if (hue > 1)
+                    hue -= 1;
+
+                hsl.H = (int)(hue * 360);
+            }
+
+            return hsl;
+        }
+
         #endregion
 
         public MainWindow() {
@@ -259,7 +313,7 @@ namespace ColorPicker2 {
             BeginStoryboard(storyBoard);
 
             SettingApply();
-
+            
             // SetColor(248, 169, 175);
             // SetColor(10, 167, 146);
             // SetColor(255, 231, 86);
@@ -291,18 +345,41 @@ namespace ColorPicker2 {
             Settings.Default.SaveB = _B;
             Settings.Default.Save();
 
-            byte[] hex = { _R, _G, _B };
-
             BackRect.Fill = new SolidColorBrush(System.Windows.Media.Color.FromRgb(_R, _G, _B));
             CopyShadow.Fill = BackRect.Fill;
             CloseRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 255, 255, 255));
             OptionRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 255, 255, 255));
-            ColorCode.Text = Insertspace(BitConverter.ToString(hex).Replace("-", string.Empty));
 
 
             var hsbColor = RgbToHsb(System.Windows.Media.Color.FromRgb(_R, _G, _B));
-
+            var hslColor = RgbToHSL(System.Windows.Media.Color.FromRgb(_R, _G, _B));
             double L = RgbToL(_R, _G, _B);
+
+
+            // 타입별로 색상코드 등록
+            switch (formatType) {
+                case 0:
+                    byte[] hex = { _R, _G, _B };
+                    ColorCode.Padding = new Thickness(0, 67, 0, 0);
+                    ColorCode.FontSize = 40;
+                    ColorCode.Text = InsertHashspace(BitConverter.ToString(hex).Replace("-", string.Empty));
+                    break;
+                case 1:
+                    ColorCode.Padding = new Thickness(0, 72, 0, 0);
+                    ColorCode.FontSize = 30;
+                    ColorCode.Text = Insertspace(_R.ToString()) + ",| " + Insertspace(_G.ToString()) + ",| " + Insertspace(_B.ToString());
+                    break;
+                case 2:
+                    ColorCode.Padding = new Thickness(0, 72, 0, 0);
+                    ColorCode.FontSize = 30;
+                    ColorCode.Text = Insertspace(((int)hsbColor.H).ToString()) + ",| " + Insertspace(((int)(hsbColor.S * 100)).ToString()) + ",| " + Insertspace(((int)(hsbColor.B * 100)).ToString());
+                    break;
+                case 3:
+                    ColorCode.Padding = new Thickness(0, 72, 0, 0);
+                    ColorCode.FontSize = 30;
+                    ColorCode.Text = Insertspace(((int)hslColor.H).ToString()) + ",| " + Insertspace(((int)(hslColor.S * 100)).ToString())  + ",| " + Insertspace(((int)(hslColor.L * 100)).ToString());
+                    break;
+            }
 
             if (L >= 0.80) {
                 var TextColor = hsbColor;
@@ -311,32 +388,43 @@ namespace ColorPicker2 {
                 ColorCode.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(TextRGBColor.R, TextRGBColor.G, TextRGBColor.B));
                 CopyShadow.Fill = ColorCode.Foreground;
 
+            } else
+                ColorCode.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 255, 255));
 
-            } else ColorCode.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromRgb(255, 255, 255));
-
+            // 닫기 버튼 배경 색상조절
             if (L >= 0.55) {
                 CloseRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
                 OptionRect_Back.Fill = new SolidColorBrush(System.Windows.Media.Color.FromArgb(38, 0, 0, 0));
-            } 
+            }
 
             double colorL;
-
             colorL = L;
 
+            // 태그, 색상, 옵션 색상조절
             SetImgColor(prevL, colorL);
-
             prevL = colorL;
 
+            // 자동카피
             if (isAutoCopy) {
                 CopyCode();
             }
         }
 
         private string Insertspace(string str) {
-            string newstr = "|";
+            string newstr = "  ";
             for (int i = 0; i < str.Length; i++) {
                 newstr += str.Substring(i, 1);
-                newstr += "|";
+                newstr += "  ";
+            }
+
+            return newstr;
+        }
+
+        private string InsertHashspace(string str) {
+            string newstr = "| ";
+            for (int i = 0; i < str.Length; i++) {
+                newstr += str.Substring(i, 1);
+                newstr += "| ";
             }
 
             return newstr;
@@ -375,7 +463,12 @@ namespace ColorPicker2 {
         }
 
         private void CopyCode() {
-            Clipboard.SetText("#" + ColorCode.Text.Replace("|", ""));
+            String code = ColorCode.Text.Replace("|", "");
+            code = code.Replace("  ", "");
+
+            if (formatType == 0)
+                code = "#" + code;
+            Clipboard.SetText(code);
         }
 
         private void Copy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
@@ -383,6 +476,7 @@ namespace ColorPicker2 {
         }
 
         bool pXKey;
+        System.Windows.Media.Color nColor;
         private void Main_KeyDown(object sender, KeyEventArgs e) {
             if (e.Key == Key.C) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Copied");
@@ -393,26 +487,19 @@ namespace ColorPicker2 {
             if (e.Key == Key.X) {
                 System.Drawing.Color c = GetColorOnScreen();
 
+                nColor.R = c.R;
+                nColor.G = c.G;
+                nColor.B = c.B;
+
                 SetColor(c.R, c.G, c.B);
             }
-
-            // if(e.Key == Key.A)
-            //     SetColor(0x5A, 0x80, 0x9E);
-            // 
-            // if (e.Key == Key.S)
-            //     SetColor(0x7C, 0x79, 0xA2);
-            // 
-            // if (e.Key == Key.D)
-            //     SetColor(0xF5, 0x7D, 0x7C);
-            // 
-            // if (e.Key == Key.F)
-            //     SetColor(0xFF, 0xC1, 0xA6);
-            // 
-            // if (e.Key == Key.G)
-            //     SetColor(0x6C, 0xC2, 0xBD);
         }
 
         private void InitializeColorRect_Loaded(object sender, RoutedEventArgs e) {
+            ColorLoad();
+        }
+
+        private void ColorLoad() {
             byte _r, _g, _b;
             _r = Settings.Default.SaveR;
             _g = Settings.Default.SaveG;
@@ -466,7 +553,7 @@ namespace ColorPicker2 {
             }
         }
 
-        bool isOption = false;        
+        bool isOption = false;
         private void OptionBtn_Click(object sender, MouseButtonEventArgs e) {
             if (isOption) {
                 this.Height = 200;
@@ -496,9 +583,11 @@ namespace ColorPicker2 {
 
         bool isAutoCopy;
         bool isHideCopyButton;
+        byte formatType;
         private void SettingApply() {
             isAutoCopy = Properties.Settings.Default.AutoCopy;
             isHideCopyButton = Properties.Settings.Default.HideCopyButton;
+            formatType = Properties.Settings.Default.Format;
 
             if (isHideCopyButton) {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("CopyButtonInvisible");
@@ -507,6 +596,8 @@ namespace ColorPicker2 {
                 System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("CopyButtonVisible");
                 BeginStoryboard(storyBoard);
             }
+
+            SetTagFormat();
         }
 
         private void HelpButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
@@ -521,6 +612,15 @@ namespace ColorPicker2 {
         private void Main_Deactivated(object sender, EventArgs e) {
             System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("Deactivated");
             BeginStoryboard(storyBoard);
+        }
+
+        private void SetTagFormat() {
+            String[] tagCode = { "Hash", "RGB", "HSV", "HSL" };
+
+            Tag_White.Source = new BitmapImage(new Uri("pack://application:,,,/ColorPicker2;component/Res/Tag_" + tagCode[formatType] + "_White.png"));
+            Tag_Black.Source = new BitmapImage(new Uri("pack://application:,,,/ColorPicker2;component/Res/Tag_" + tagCode[formatType] + "_Black.png"));
+
+            ColorLoad();
         }
     }
 }

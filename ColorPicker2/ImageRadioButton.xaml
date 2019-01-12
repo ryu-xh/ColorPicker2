@@ -90,14 +90,14 @@
                         <CubicEase EasingMode="EaseIn"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="{Binding RadiusX, ElementName=BackRect}">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="40">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase EasingMode="EaseIn"/>
+                        <BackEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="30">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <ElasticEase EasingMode="EaseOut" Springiness="1" Oscillations="2"/>
+                        <BackEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
@@ -107,14 +107,14 @@
                         <CubicEase EasingMode="EaseIn"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="{Binding RadiusY, ElementName=BackRect}">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="40">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase EasingMode="EaseIn"/>
+                        <BackEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="30">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <ElasticEase EasingMode="EaseOut" Springiness="1" Oscillations="2"/>
+                        <BackEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
@@ -124,14 +124,14 @@
                         <CubicEase EasingMode="EaseIn"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="{Binding RadiusX, ElementName=ActiveBackRect}">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="40">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase EasingMode="EaseIn"/>
+                        <BackEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="30">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <ElasticEase EasingMode="EaseOut" Springiness="1" Oscillations="2"/>
+                        <BackEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
@@ -141,14 +141,14 @@
                         <CubicEase EasingMode="EaseIn"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="{Binding RadiusY, ElementName=ActiveBackRect}">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="40">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <CubicEase EasingMode="EaseIn"/>
+                        <BackEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="30">
                     <EasingDoubleKeyFrame.EasingFunction>
-                        <ElasticEase EasingMode="EaseOut" Springiness="1" Oscillations="2"/>
+                        <BackEase EasingMode="EaseOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>

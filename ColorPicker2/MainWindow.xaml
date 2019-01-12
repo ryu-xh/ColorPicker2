@@ -148,12 +148,12 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="WhiteToBlack_TAG">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HASH_White">
-                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=HASH_White}"/>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Tag_White">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=Tag_White}"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HASH_Black">
-                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=HASH_Black}">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Tag_Black">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=Tag_Black}">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <CubicEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -162,8 +162,8 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="BlackToWhite_TAG">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HASH_White">
-                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=HASH_White}">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Tag_White">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=Tag_White}">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <CubicEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -174,8 +174,8 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="HASH_Black">
-                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=HASH_Black}">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Tag_Black">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding Opacity, ElementName=Tag_Black}">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <CubicEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -761,9 +761,9 @@
                 <DropShadowEffect ShadowDepth="0" Opacity="0.3" BlurRadius="10"/>
             </Rectangle.Effect>
         </Rectangle>
-        <Image x:Name="HASH_White" HorizontalAlignment="Left" Height="180" Margin="5,5,0,0" VerticalAlignment="Top" Width="250" Source="Res/HASH_White.png" Opacity="0" Stretch="Fill"/>
-        <Image x:Name="HASH_Black" HorizontalAlignment="Left" Height="180" Margin="5,5,0,0" VerticalAlignment="Top" Width="250" Source="Res/HASH_Black.png" Opacity="0" Stretch="Fill"/>
-        <TextBlock x:Name="ColorCode" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="/ColorPicker2;component/Res/#Rubik Medium" FontSize="40" TextAlignment="Center" Padding="0,67,0,0" TextOptions.TextHintingMode="Animated" Width="250" Height="180" Foreground="White" Text="F|8|A|9|A|F" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+        <Image x:Name="Tag_White" HorizontalAlignment="Left" Height="180" Margin="5,5,0,0" VerticalAlignment="Top" Width="250" Source="Res/Tag_Hash_White.png" Opacity="0" Stretch="Fill"/>
+        <Image x:Name="Tag_Black" HorizontalAlignment="Left" Height="180" Margin="5,5,0,0" VerticalAlignment="Top" Width="250" Source="Res/Tag_Hash_Black.png" Opacity="0" Stretch="Fill"/>
+        <TextBlock x:Name="ColorCode" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="/ColorPicker2;component/Res/#Rubik Medium" FontSize="36" TextAlignment="Center" Padding="0,67,0,0" TextOptions.TextHintingMode="Animated" Width="250" Height="180" Foreground="White" Text="F|8|A|9|A|F" ScrollViewer.VerticalScrollBarVisibility="Disabled" FontStretch="UltraCondensed"/>
 
         <Rectangle x:Name="DragRect" Margin="5,5,15,0" Fill="#00000000" Height="180" VerticalAlignment="Top" MouseLeftButtonDown="DragRect_MouseLeftButtonDown" />
         <Grid x:Name="CopyGrid" Margin="215,145,0,0" HorizontalAlignment="Left" Width="50" Height="50" VerticalAlignment="Top">
@@ -803,7 +803,6 @@
             </Rectangle>
             <Rectangle x:Name="CloseBtn" Stroke="Black" StrokeThickness="0" Fill="#00000000" MouseLeftButtonDown="CloseBtn_MouseLeftButtonDown"/>
         </Grid>
-        <Rectangle x:Name="InitializeColorRect" Loaded="InitializeColorRect_Loaded" Height="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="0" />
         <Rectangle x:Name="OptionRect_Back" HorizontalAlignment="Right" Height="30" Margin="0,150,230.4,0" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Opacity="0" Fill="#4C000000"/>
         <Rectangle x:Name="OptionRect_White" Opacity="0" HorizontalAlignment="Left" Height="30" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Margin="10,150,0,0" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
@@ -850,6 +849,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Rectangle x:Name="OptionBtn" HorizontalAlignment="Left" Height="30" Margin="10,150,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="30" Fill="#00000000" MouseDown="OptionBtn_Click"/>
+        <Rectangle x:Name="InitializeColorRect" Loaded="InitializeColorRect_Loaded" Height="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="0" />
 
     </Grid>
 </Window>

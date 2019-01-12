@@ -120,16 +120,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Resource Include="Res\Rubik-Medium.ttf" />
-    <Resource Include="Res\Rubik_Light.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Res\HASH_Black.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Res\HASH_White.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Res\CopyBtn.png" />
@@ -161,9 +154,6 @@
     <Resource Include="Res\HideCopyButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Res\settingTest.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Res\Hex_Active.png" />
     <Resource Include="Res\Hex_Deactive.png" />
     <Resource Include="Res\HSL_Active.png" />
@@ -172,6 +162,18 @@
     <Resource Include="Res\HSV_Deactive.png" />
     <Resource Include="Res\RGB_Active.png" />
     <Resource Include="Res\RGB_Deactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Tag_HSL_Black.png" />
+    <Resource Include="Res\Tag_HSL_White.png" />
+    <Resource Include="Res\Tag_HSV_Black.png" />
+    <Resource Include="Res\Tag_HSV_White.png" />
+    <Resource Include="Res\Tag_RGB_Black.png" />
+    <Resource Include="Res\Tag_RGB_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Tag_Hash_Black.png" />
+    <Resource Include="Res\Tag_Hash_White.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
