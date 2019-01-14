@@ -303,7 +303,7 @@ namespace ColorPicker2 {
 
             pXKey = Settings.Default.pXKey;
             if (!pXKey) {
-                PickMessageRect.Visibility = Visibility.Visible;
+                HelpButton_MouseLeftButtonDown(this, null);
             }
 
             System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("CopyButtonInvisible");
@@ -466,8 +466,11 @@ namespace ColorPicker2 {
             String code = ColorCode.Text.Replace("|", "");
             code = code.Replace("  ", "");
 
-            if (formatType == 0)
+            if (formatType == 0) {
+                code = code.Replace(" ", "");
                 code = "#" + code;
+            }
+                
             Clipboard.SetText(code);
         }
 
@@ -521,9 +524,6 @@ namespace ColorPicker2 {
                     Settings.Default.Save();
 
                     pXKey = true;
-
-                    System.Windows.Media.Animation.Storyboard storyBoard = (System.Windows.Media.Animation.Storyboard)FindResource("PressXKey");
-                    BeginStoryboard(storyBoard);
                 }
             }
         }
@@ -571,8 +571,9 @@ namespace ColorPicker2 {
         }
 
         private void CloseBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
-            this.Close();
             settingWindow.Close();
+            helpWindow.Close();
+            this.Close();
         }
 
         SettingWindow settingWindow = new SettingWindow();
@@ -600,8 +601,18 @@ namespace ColorPicker2 {
             SetTagFormat();
         }
 
+        HelpWindow helpWindow = new HelpWindow();
         private void HelpButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+            helpWindow.KeyPress += new RoutedEventHandler(KeyPressEventFromOtherWindow);
+            helpWindow.ActivatedWindow += new RoutedEventHandler(Main_Activated);
+            helpWindow.DeactivatedWindow += new RoutedEventHandler(Main_Deactivated);
+            helpWindow.Show();
+        }
 
+        private void KeyPressEventFromOtherWindow(object sender, RoutedEventArgs e) {
+            KeyEventArgs key = e as KeyEventArgs;
+
+            Main_KeyDown(this, key);
         }
 
         private void Main_Activated(object sender, EventArgs e) {
@@ -621,6 +632,10 @@ namespace ColorPicker2 {
             Tag_Black.Source = new BitmapImage(new Uri("pack://application:,,,/ColorPicker2;component/Res/Tag_" + tagCode[formatType] + "_Black.png"));
 
             ColorLoad();
+        }
+
+        private void InfoButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+
         }
     }
 }

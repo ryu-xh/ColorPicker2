@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorPicker2"
         mc:Ignorable="d"
-        Title="ColorPicker2" Height="255" Width="270" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" Loaded="Main_Loaded" KeyDown="Main_KeyDown" KeyUp="Main_KeyUp" Activated="Main_Activated" Deactivated="Main_Deactivated">
+        Title="ColorPicker2" Height="255" Width="270" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" Loaded="Main_Loaded" KeyDown="Main_KeyDown" KeyUp="Main_KeyUp" Activated="Main_Activated" Deactivated="Main_Deactivated" Topmost="True">
     <Window.Resources>
         <Storyboard x:Key="Close_Over">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CloseRect_Back">
@@ -183,20 +183,6 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <CubicEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="PressXKey">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PickMessageRect">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
@@ -690,7 +676,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Margin="0">
-        <local:IconButton x:Name="InfoButton" HorizontalAlignment="Left" Height="50" Margin="130,200,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+        <local:IconButton x:Name="InfoButton" HorizontalAlignment="Left" Height="50" Margin="130,200,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="InfoButton_MouseLeftButtonDown">
             <local:IconButton.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -784,11 +770,6 @@
                 </Rectangle.Fill>
             </Rectangle>
         </Grid>
-        <Rectangle x:Name="PickMessageRect" Margin="5,5,15.4,155" StrokeThickness="0" MouseDown="PickMessageRect_MouseDown" Visibility="Hidden" >
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Res/pX2p.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
         <Grid x:Name="CloseGrid" Margin="220,10,0,0" HorizontalAlignment="Left" Width="30" Height="30" VerticalAlignment="Top">
             <Rectangle x:Name="CloseRect_Back" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0" Opacity="0" Fill="#4C000000"/>
             <Rectangle x:Name="CloseRect_White" Opacity="0" RadiusY="25" RadiusX="25" Stroke="Black" StrokeThickness="0">

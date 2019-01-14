@@ -14,6 +14,25 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <SupportUrl>https://ryuusei.io/ColorPicker2</SupportUrl>
+    <ProductName>ColorPicker2</ProductName>
+    <PublisherName>RyuuseiKang</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -56,8 +75,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IconButton.xaml.cs">
       <DependentUpon>IconButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ActionIndicator.xaml.cs">
+      <DependentUpon>ActionIndicator.xaml</DependentUpon>
     </Compile>
     <Compile Include="ImageRadioButton.xaml.cs">
       <DependentUpon>ImageRadioButton.xaml</DependentUpon>
@@ -68,7 +93,15 @@
     <Compile Include="ToggleButton.xaml.cs">
       <DependentUpon>ToggleButton.xaml</DependentUpon>
     </Compile>
+    <Page Include="HelpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="IconButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ActionIndicator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -137,9 +170,6 @@
     <Resource Include="Res\CloseBtn_Black.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Res\pX2p.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Res\settings_black_36pt_1x.png" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +204,37 @@
   <ItemGroup>
     <Resource Include="Res\Tag_Hash_Black.png" />
     <Resource Include="Res\Tag_Hash_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Pick_Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\C_Key.png" />
+    <Resource Include="Res\X_Key.png" />
+    <Resource Include="Res\Z_Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Button.png" />
+    <Resource Include="Res\Press_Keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Copy_Color_Code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\And.png" />
+    <Resource Include="Res\Move_Mouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

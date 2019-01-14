@@ -1,0 +1,46 @@
+﻿<UserControl x:Name="ActionIndicatorControl" x:Class="ColorPicker2.ActionIndicator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ColorPicker2"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="30">
+    <UserControl.Resources>
+        <Storyboard x:Key="Active">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ActiveRect">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding ElementName=ActiveRect, Path=Opacity}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Deactive">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ActiveRect">
+                <EasingDoubleKeyFrame KeyTime="0" Value="{Binding ElementName=ActiveRect, Path=Opacity}">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Rectangle x:Name="BackRect" Margin="0,0,0,0" StrokeThickness="0" Fill="#FFE1E1E1" RadiusX="15" RadiusY="15"/>
+        <Rectangle x:Name="ActiveRect" Margin="0,0,0,0" StrokeThickness="0" Fill="#FF4CAF50" RadiusX="15" RadiusY="15" Opacity="0"/>
+        <Rectangle x:Name="WhiteRect" Margin="5,5,5,5" StrokeThickness="0" Fill="White" RadiusX="10" RadiusY="10"/>
+        <Rectangle x:Name="IconRect" Margin="5,5,5,5" StrokeThickness="0" Fill="{Binding Icon, ElementName=ActionIndicatorControl}" RadiusX="10" RadiusY="10"/>
+
+    </Grid>
+</UserControl>

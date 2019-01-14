@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\git\ColorPicker2\ColorPicker2\App.xaml
-5-1329439310
+71017355695
 
-9111348902
+15835306017
 14433676064
-IconButton.xaml;ImageRadioButton.xaml;MainWindow.xaml;SettingWindow.xaml;ToggleButton.xaml;
+HelpWindow.xaml;IconButton.xaml;ActionIndicator.xaml;ImageRadioButton.xaml;MainWindow.xaml;SettingWindow.xaml;ToggleButton.xaml;
 
-False
+True
 
