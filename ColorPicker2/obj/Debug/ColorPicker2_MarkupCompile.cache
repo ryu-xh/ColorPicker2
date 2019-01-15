@@ -8,13 +8,13 @@ E:\git\ColorPicker2\ColorPicker2\obj\Debug\
 ColorPicker2
 none
 false
-DEBUG;TRACE
+CODE_ANALYSIS;DEBUG;TRACE
 E:\git\ColorPicker2\ColorPicker2\App.xaml
 71017355695
 
-15835306017
+111477692547
 14433676064
 HelpWindow.xaml;IconButton.xaml;ActionIndicator.xaml;ImageRadioButton.xaml;MainWindow.xaml;SettingWindow.xaml;ToggleButton.xaml;
 
-True
+False
 

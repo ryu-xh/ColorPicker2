@@ -1,6 +1,7 @@
 ﻿using ColorPicker2.Properties;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -635,7 +636,7 @@ namespace ColorPicker2 {
         }
 
         private void InfoButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
-
+            Process.Start("explorer.exe", @"https://ryuusei.io/ColorPicker2/Info.html?");
         }
     }
 }
