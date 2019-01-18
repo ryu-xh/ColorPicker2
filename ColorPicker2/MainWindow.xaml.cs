@@ -627,9 +627,9 @@ namespace ColorPicker2 {
         string applicationID = "b77a5c561934e089";
         private void InfoButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            string updateLink = domain + "/" + projectName + "/Info.html?applicationID%3D&" + applicationID + "&version%3D" + version;
+            string updateLink = domain + "/" + projectName + "/Info.html?applicationID" + applicationID + "&version=" + version;
 
-            Process.Start("explorer.exe", @updateLink);
+            Process.Start(@updateLink);
         }
     }
 }
