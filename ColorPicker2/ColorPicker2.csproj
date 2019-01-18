@@ -29,7 +29,7 @@
     <ProductName>ColorPicker2</ProductName>
     <PublisherName>RYUUSEI</PublisherName>
     <MinimumRequiredVersion>2.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
