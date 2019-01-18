@@ -76,8 +76,6 @@ C:\Users\seto_\Desktop\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.pdb
 E:\git\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe.config
 E:\git\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe
 E:\git\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.pdb
-E:\git\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe.CodeAnalysisLog.xml
-E:\git\ColorPicker2\ColorPicker2\bin\Debug\ColorPicker2.exe.lastcodeanalysissucceeded
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\HelpWindow.g.cs
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\IconButton.g.cs
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\ActionIndicator.g.cs
@@ -102,3 +100,4 @@ E:\git\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.GenerateResource.
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csproj.CoreCompileInputs.cache
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.exe
 E:\git\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.pdb
+E:\git\ColorPicker2\ColorPicker2\obj\Debug\ColorPicker2.csprojAssemblyReference.cache

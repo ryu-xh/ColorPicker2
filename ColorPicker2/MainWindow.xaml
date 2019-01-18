@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorPicker2"
         mc:Ignorable="d"
-        Title="ColorPicker2" Height="255" Width="270" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" Loaded="Main_Loaded" KeyDown="Main_KeyDown" KeyUp="Main_KeyUp" Activated="Main_Activated" Deactivated="Main_Deactivated" Topmost="True">
+        Title="ColorPicker2" Height="255" Width="270" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" Loaded="Main_Loaded" KeyDown="Main_KeyDown" Activated="Main_Activated" Deactivated="Main_Deactivated" Topmost="True">
     <Window.Resources>
         <Storyboard x:Key="Close_Over">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CloseRect_Back">

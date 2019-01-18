@@ -1,22 +1,13 @@
 ﻿using ColorPicker2.Properties;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
-using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ColorPicker2 {
     /// <summary>
@@ -479,7 +470,7 @@ namespace ColorPicker2 {
             CopyCode();
         }
 
-        bool pXKey;
+        bool pXKey = false;
         System.Windows.Media.Color nColor;
         private void Main_KeyDown(object sender, KeyEventArgs e) {
             if (e.Key == Key.C) {
@@ -496,6 +487,13 @@ namespace ColorPicker2 {
                 nColor.B = c.B;
 
                 SetColor(c.R, c.G, c.B);
+
+                if (!pXKey) {
+                    Settings.Default.pXKey = true;
+                    Settings.Default.Save();
+
+                    pXKey = true;
+                }
             }
         }
 
@@ -516,17 +514,6 @@ namespace ColorPicker2 {
             base.OnMouseLeftButtonDown(e);
 
             this.DragMove();
-        }
-
-        private void Main_KeyUp(object sender, KeyEventArgs e) {
-            if (e.Key == Key.X) {
-                if (!pXKey) {
-                    Settings.Default.pXKey = true;
-                    Settings.Default.Save();
-
-                    pXKey = true;
-                }
-            }
         }
 
         private System.Drawing.Color GetColorOnScreen() {
@@ -635,8 +622,14 @@ namespace ColorPicker2 {
             ColorLoad();
         }
 
+        string domain = "https://ryuusei.io";
+        string projectName = "ColorPicker2";
+        string applicationID = "b77a5c561934e089";
         private void InfoButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
-            Process.Start("explorer.exe", @"https://ryuusei.io/ColorPicker2/Info.html?");
+            string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            string updateLink = domain + "/" + projectName + "/Info.html?applicationID%3D&" + applicationID + "&version%3D" + version;
+
+            Process.Start("explorer.exe", @updateLink);
         }
     }
 }
