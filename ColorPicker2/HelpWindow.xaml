@@ -1,4 +1,4 @@
-﻿<Window x:Name="Window" x:Class="ColorPicker2.HelpWindow"
+<Window x:Name="Window" x:Class="ColorPicker2.HelpWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -37,9 +37,11 @@
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard x:Name="Close_Over_BeginStoryboard" Storyboard="{StaticResource Close_Over}"/>
-            <BeginStoryboard Storyboard="{StaticResource Close_Leave}"/>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="CloseBtn">
+            <BeginStoryboard Storyboard="{StaticResource Close_Over}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="CloseBtn">
+            <BeginStoryboard x:Name="Close_Leave_BeginStoryboard1" Storyboard="{StaticResource Close_Leave}"/>
         </EventTrigger>
     </Window.Triggers>
     <Grid>
