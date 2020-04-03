@@ -100,387 +100,16 @@ namespace ColorPicker2 {
         #line 675 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Media.Animation.BeginStoryboard Close_Leave_BeginStoryboard;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 679 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal ColorPicker2.IconButton InfoButton;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 701 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal ColorPicker2.IconButton HelpButton;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 723 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal ColorPicker2.IconButton SettingButton;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 745 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle BackRect;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 750 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image Tag_White;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 751 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image Tag_Black;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 752 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock ColorCode;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 754 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle DragRect;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 755 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Grid CopyGrid;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 756 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle CopyShadow;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 761 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle CopyWhite;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 762 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle Copy;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 767 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle Copied;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 773 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Grid CloseGrid;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 774 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle CloseRect_Back;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 775 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle CloseRect_White;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 780 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle CloseRect_Black;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 785 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle CloseBtn;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 787 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle OptionRect_Back;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 788 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle OptionRect_White;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 810 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle OptionRect_Black;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 832 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle OptionBtn;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 833 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Shapes.Rectangle InitializeColorRect;
-        
-        #line default
-        #line hidden
-        
-        private bool _contentLoaded;
-        
-        /// <summary>
-        /// InitializeComponent
-        /// </summary>
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
-        public void InitializeComponent() {
-            if (_contentLoaded) {
-                return;
-            }
-            _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ColorPicker2;component/mainwindow.xaml", System.UriKind.Relative);
-            
-            #line 1 "..\..\MainWindow.xaml"
-            System.Windows.Application.LoadComponent(this, resourceLocater);
-            
-            #line default
-            #line hidden
-        }
-        
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal System.Delegate _CreateDelegate(System.Type delegateType, string handler) {
-            return System.Delegate.CreateDelegate(delegateType, this, handler);
-        }
-        
-        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-        void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
-            switch (connectionId)
-            {
-            case 1:
-            this.Main = ((ColorPicker2.MainWindow)(target));
-            
-            #line 8 "..\..\MainWindow.xaml"
-            this.Main.Loaded += new System.Windows.RoutedEventHandler(this.Main_Loaded);
-            
-            #line default
-            #line hidden
-            
-            #line 8 "..\..\MainWindow.xaml"
-            this.Main.KeyDown += new System.Windows.Input.KeyEventHandler(this.Main_KeyDown);
-            
-            #line default
-            #line hidden
-            
-            #line 8 "..\..\MainWindow.xaml"
-            this.Main.Activated += new System.EventHandler(this.Main_Activated);
-            
-            #line default
-            #line hidden
-            
-            #line 8 "..\..\MainWindow.xaml"
-            this.Main.Deactivated += new System.EventHandler(this.Main_Deactivated);
-            
-            #line default
-            #line hidden
-            return;
-            case 2:
-            this.Copied_BeginStoryboard = ((System.Windows.Media.Animation.BeginStoryboard)(target));
-            return;
-            case 3:
-            this.Option_Open_BeginStoryboard = ((System.Windows.Media.Animation.BeginStoryboard)(target));
-            return;
-            case 4:
-            this.Option_Close_BeginStoryboard = ((System.Windows.Media.Animation.BeginStoryboard)(target));
-            return;
-            case 5:
-            this.Activated_BeginStoryboard = ((System.Windows.Media.Animation.BeginStoryboard)(target));
-            return;
-            case 6:
-            this.Option_Over_BeginStoryboard = ((System.Windows.Media.Animation.BeginStoryboard)(target));
-            return;
-            case 7:
-            this.Option_Leave_BeginStoryboard = ((System.Windows.Media.Animation.BeginStoryboard)(target));
-            return;
-            case 8:
-            this.Close_Leave_BeginStoryboard = ((System.Windows.Media.Animation.BeginStoryboard)(target));
-            return;
-            case 9:
-            this.InfoButton = ((ColorPicker2.IconButton)(target));
-            return;
-            case 10:
-            this.HelpButton = ((ColorPicker2.IconButton)(target));
-            return;
-            case 11:
-            this.SettingButton = ((ColorPicker2.IconButton)(target));
-            return;
-            case 12:
-            this.BackRect = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 13:
-            this.Tag_White = ((System.Windows.Controls.Image)(target));
-            return;
-            case 14:
-            this.Tag_Black = ((System.Windows.Controls.Image)(target));
-            return;
-            case 15:
-            this.ColorCode = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 16:
-            this.DragRect = ((System.Windows.Shapes.Rectangle)(target));
-            
-            #line 754 "..\..\MainWindow.xaml"
-            this.DragRect.MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.DragRect_MouseLeftButtonDown);
-            
-            #line default
-            #line hidden
-            return;
-            case 17:
-            this.CopyGrid = ((System.Windows.Controls.Grid)(target));
-            return;
-            case 18:
-            this.CopyShadow = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 19:
-            this.CopyWhite = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 20:
-            this.Copy = ((System.Windows.Shapes.Rectangle)(target));
-            
-            #line 762 "..\..\MainWindow.xaml"
-            this.Copy.MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.Copy_MouseLeftButtonDown);
-            
-            #line default
-            #line hidden
-            return;
-            case 21:
-            this.Copied = ((System.Windows.Shapes.Rectangle)(target));
-            
-            #line 767 "..\..\MainWindow.xaml"
-            this.Copied.MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.Copy_MouseLeftButtonDown);
-            
-            #line default
-            #line hidden
-            return;
-            case 22:
-            this.CloseGrid = ((System.Windows.Controls.Grid)(target));
-            return;
-            case 23:
-            this.CloseRect_Back = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 24:
-            this.CloseRect_White = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 25:
-            this.CloseRect_Black = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 26:
-            this.CloseBtn = ((System.Windows.Shapes.Rectangle)(target));
-            
-            #line 785 "..\..\MainWindow.xaml"
-            this.CloseBtn.MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.CloseBtn_MouseLeftButtonDown);
-            
-            #line default
-            #line hidden
-            return;
-            case 27:
-            this.OptionRect_Back = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 28:
-            this.OptionRect_White = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 29:
-            this.OptionRect_Black = ((System.Windows.Shapes.Rectangle)(target));
-            return;
-            case 30:
-            this.OptionBtn = ((System.Windows.Shapes.Rectangle)(target));
-            
-            #line 832 "..\..\MainWindow.xaml"
-            this.OptionBtn.MouseDown += new System.Windows.Input.MouseButtonEventHandler(this.OptionBtn_Click);
-            
-            #line default
-            #line hidden
-            return;
-            case 31:
-            this.InitializeColorRect = ((System.Windows.Shapes.Rectangle)(target));
-            
-            #line 833 "..\..\MainWindow.xaml"
-            this.InitializeColorRect.Loaded += new System.Windows.RoutedEventHandler(this.InitializeColorRect_Loaded);
-            
-            #line default
-            #line hidden
-            return;
-            }
-            this._contentLoaded = true;
-        }
-    }
-}
-
+   {"id":"Microsoft.VisualStudio.Workload.VisualStudioExtension","version":"15.7.27625.0","type":"Workload","icon":{"mimeType":"image/svg+xml","base64":"PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+DQogIDxzdHlsZT4uaWNvbi1jYW52YXMtdHJhbnNwYXJlbnR7b3BhY2l0eTowO2ZpbGw6I2Y2ZjZmNn0uaWNvbi12aXN1YWxzdHVkaW97ZmlsbDojNjgyMTdhfTwvc3R5bGU+DQogIDxwYXRoIGNsYXNzPSJpY29uLWNhbnZhcy10cmFuc3BhcmVudCIgZD0iTTMyIDMySDBWMGgzMnYzMnoiIGlkPSJjYW52YXMiLz4NCiAgPGcgaWQ9Imljb25CZyI+DQogICAgPHBhdGggY2xhc3M9Imljb24tdmlzdWFsc3R1ZGlvIiBkPSJNOCAyNGg3djZIMlYyaDEzdjZIOHYxNnptMi0yaDEyVjEwSDEwdjEyem03LTIwdjZoNFY2aDV2NWgtMnY0aDZWMkgxN3ptMCAyMnY2aDEzVjE3aC02djdoLTd6Ii8+DQogIDwvZz4NCjwvc3ZnPg=="},"dependencies":{"Component.Dotfuscator":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.Component.VC.Runtime.OSSupport":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.VisualStudio.Component.AppInsights.Tools":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.VisualStudio.Component.ClassDesigner":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.VisualStudio.Component.DiagnosticTools":{"version":"[15.0,16.0)","type":"Recommended"},"Microsoft.VisualStudio.Component.IntelliTrace.FrontEnd":{"version":"[15.0,16.0)","type":"Recommended","when":["Microsoft.VisualStudio.Product.Enterprise"]},"Microsoft.VisualStudio.Component.VC.ATL":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.VisualStudio.Component.VC.ATLMFC":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.VisualStudio.Component.VC.CoreIDE":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.VisualStudio.Component.VC.Tools.x86.x64":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.VisualStudio.Component.TextTemplating":{"version":"[15.0,16.0)","type":"Recommended"},"Microsoft.VisualStudio.Component.VSSDK":"[15.0,16.0)","Microsoft.VisualStudio.ComponentGroup.ArchitectureTools.Managed":{"version":"[15.0,16.0)","type":"Optional","when":["Microsoft.VisualStudio.Product.Enterprise"]},"Microsoft.VisualStudio.ComponentGroup.VisualStudioExtension.Prerequisites":"[15.0,16.0)","Microsoft.VisualStudio.Component.DslTools":{"version":"[15.0,16.0)","type":"Optional"},"Microsoft.Component.CodeAnalysis.SDK":{"version":"[15.0,16.0)","type":"Optional"}},"projectClassifiers":[{"id":"bcff0afb-66bf-37d8-b3aa-71a0700abb0f","extension":"csproj","factoryGuid":"{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}","matcherData":[{"type":"Property","capabilityType":"TypeGuid","projectPropertyId":"ProjectTypeGuids","regExMatchSource":"{82b43b9b-a64c-4715-b499-d71e9ca2bd60}"}],"matcherId":"MSBuild.Generic","appliesTo":"TypeGuid","priority":100},{"id":"cf5ca17c-cc27-37de-a5ea-6819415d2995","extension":"vbproj","factoryGuid":"{F184B08F-C81C-45F6-A57F-5ABD9991F28F}","matcherData":[{"type":"Property","capabilityType":"TypeGuid","projectPropertyId":"ProjectTypeGuids","regExMatchSource":"{82b43b9b-a64c-4715-b499-d71e9ca2bd60}"}],"matcherId":"MSBuild.Generic","appliesTo":"TypeGuid","priority":100}],"localizedResources":[{"language":"en-us","title":"Visual Studio extension development","description":"Create add-ons and extensions for Visual Studio, including new commands, code analyzers and tool windows.","longDescription":"Begin extending Visual Studio with the help of the Visual Studio SDK. Use the development tools and templates to build extensions and publish to the Marketplace.","category":"Other Toolsets","keywords":["extensibility","extend","plugin","add-on"]},{"language":"zh-cn","title":"Visual Studio æ‰©å±•å¼€å‘","description":"ä¸º Visual Studio åˆ›å»ºåŠ è½½é¡¹å’Œæ‰©å±•ï¼ŒåŒ…æ‹¬æ–°å‘½ä»¤ã€ä»£ç åˆ†æå™¨å’Œå·¥å…·çª—å£ã€‚","longDescription":"åœ¨ Visual Studio SDK çš„å¸®åŠ©ä¸‹å¼€å§‹æ‰©å±• Visual Studioã€‚ä½¿ç”¨å¼€å‘å·¥å…·å’Œæ¨¡æ¿æ¥ç”Ÿæˆæ‰©å±•å¹¶å‘å¸ƒåˆ° Marketplace ä¸Šã€‚","category":"å…¶ä»–å·¥å…·é›†","keywords":["æ‰©å±•æ€§","æ‰©å±•","æ’ä»¶","åŠ è½½é¡¹"]},{"language":"zh-tw","title":"Visual Studio æ“´å……åŠŸèƒ½é–‹ç™¼","description":"å»ºç«‹é©ç”¨æ–¼ Visual Studio çš„å¢ç›Šé›†èˆ‡æ“´å……åŠŸèƒ½ï¼ŒåŒ…æ‹¬æ–°çš„å‘½ä»¤ã€ç¨‹å¼ç¢¼åˆ†æå™¨èˆ‡å·¥å…·è¦–çª—ã€‚","longDescription":"é€é Visual Studio SDK çš„å”åŠ©ï¼Œé–‹å§‹æ“´å…… Visual Studioã€‚ä½¿ç”¨é–‹ç™¼å·¥å…·èˆ‡ç¯„æœ¬å»ºç½®æ“´å……åŠŸèƒ½ï¼Œä¸¦ç™¼è¡Œè‡³ Marketplaceã€‚","category":"å…¶ä»–å·¥å…·çµ„","keywords":["æ“´å……æ€§","æ“´å……","å¤–æ›ç¨‹å¼","é™„åŠ å…ƒä»¶"]},{"language":"cs-cz","title":"VÃ½voj rozÅ¡Ã­Å™enÃ­ sady Visual Studio","description":"UmoÅ¾Åˆuje vytvÃ¡Å™et doplÅˆky a rozÅ¡Ã­Å™enÃ­ pro Visual Studio, vÄetnÄ› novÃ½ch pÅ™Ã­kazÅ¯, analyzÃ¡torÅ¯ kÃ³du a panelÅ¯ nÃ¡strojÅ¯.","longDescription":"ZaÄnÄ›te rozÅ¡iÅ™ovat sadu Visual Studio pomocÃ­ sady Visual Studio SDK. S pouÅ¾itÃ­m vÃ½vojovÃ½ch nÃ¡strojÅ¯ a Å¡ablon vytvoÅ™te rozÅ¡Ã­Å™enÃ­ a publikujte je na webu Marketplace.","category":"DalÅ¡Ã­ sady nÃ¡strojÅ¯","keywords":["rozÅ¡iÅ™itelnost","rozÅ¡Ã­Å™enÃ­","modul plug-in","doplnÄ›k"]},{"language":"de-de","title":"Visual Studio-Extensionentwicklung","description":"Erstellen Sie Add-Ons und Extensions fÃ¼r Visual Studio, z. B. neue Befehle, Codeanalysetools und Toolfenster.","longDescription":"Beginnen Sie mithilfe des Visual Studio SDK, Visual Studio zu erweitern. Verwenden Sie die Entwicklungstools und Vorlagen, um Extensions zu erstellen und diese in Marketplace zu verÃ¶ffentlichen.","category":"Andere Toolsets","keywords":["Erweiterbarkeit","erweitern","Plug-In","Add-On"]},{"language":"es-es","title":"Desarrollo de extensiones de Visual Studio","description":"Cree complementos y extensiones para Visual Studio, incluidos nuevos comandos, analizadores de cÃ³digo y ventanas de herramientas.","longDescription":"Comience a ampliar Visual Studio con ayuda de Visual Studio SDK. Use las plantillas y herramientas de desarrollo para compilar extensiones y publicarlas en Marketplace.","category":"Otros conjuntos de herramientas","keywords":["extensibilidad","extender","complemento","complemento"]},{"language":"fr-fr","title":"DÃ©veloppement d'extension Visual Studio","description":"CrÃ©ez des composants additionnels et des extensions pour Visual Studio, notamment de nouvelles commandes, des analyseurs de code et des fenÃªtres Outil.","longDescription":"Commencez Ã  Ã©tendre Visual Studio Ã  l'aide du SDK Visual Studio. Utilisez les outils de dÃ©veloppement et les modÃ¨les pour gÃ©nÃ©rer des extensions et les publier sur Marketplace.","category":"Autres ensembles d'outils","keywords":["extensibilitÃ©","Ã©tendre","plug-in","composant additionnel"]},{"language":"it-it","title":"Sviluppo di estensioni di Visual Studio","description":"Consente di creare componenti aggiuntivi ed estensioni per Visual Studio, includi nuovi comandi, analizzatori del codice e finestre degli strumenti.","longDescription":"Per iniziare a estendere Visual Studio, Ã¨ possibile usare Visual Studio SDK. Gli strumenti di sviluppo e i modelli disponibili consentono di compilare estensioni e pubblicarle nel Marketplace.","category":"Altri set di strumenti","keywords":["estendibilitÃ ","estendere","plug-in","componente aggiuntivo"]},{"language":"ja-jp","title":"Visual Studio æ‹¡å¼µæ©Ÿèƒ½ã®é–‹ç™º","description":"Visual Studio ç”¨ã®ã‚¢ãƒ‰ã‚ªãƒ³ã‚„æ‹¡å¼µæ©Ÿèƒ½ (æ–°ã—ã„ã‚³ãƒãƒ³ãƒ‰ã€ã‚³ãƒ¼ãƒ‰ ã‚¢ãƒŠãƒ©ã‚¤ã‚¶ãƒ¼ã€ãƒ„ãƒ¼ãƒ« ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’å«ã¿ã¾ã™) ã‚’ä½œæˆã—ã¾ã™ã€‚","longDescription":"Visual Studio SDK ã®ãƒ˜ãƒ«ãƒ—ã‚’ä½¿ç”¨ã—ã¦ Visual Studio ã®æ‹¡å¼µã‚’é–‹å§‹ã—ã¾ã™ã€‚é–‹ç™ºãƒ„ãƒ¼ãƒ«ã¨ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’ä½¿ç”¨ã—ã¦ã€æ‹¡å¼µæ©Ÿèƒ½ã‚’æ§‹ç¯‰ã—ã€Marketplace ã«ç™ºè¡Œã—ã¾ã™ã€‚","category":"ä»–ã®ãƒ„ãƒ¼ãƒ«ã‚»ãƒƒãƒˆ","keywords":["æ‹¡å¼µæ€§","æ‹¡å¼µ","ãƒ—ãƒ©ã‚°ã‚¤ãƒ³","ã‚¢ãƒ‰ã‚ªãƒ³"]},{"language":"ko-kr","title":"Visual Studio í™•ì¥ ê°œë°œ","description":"Visual Studioìš© ì¶”ê°€ ê¸°ëŠ¥ ë° í™•ì¥(ìƒˆ ëª…ë ¹, ì½”ë“œ ë¶„ì„ê¸° ë° ë„êµ¬ ì°½ í¬í•¨)ì„ ë§Œë“­ë‹ˆë‹¤.","longDescription":"Visual Studio SDKë¥¼ ì‚¬ìš©í•˜ì—¬ Visual Studio í™•ì¥ì„ ì‹œì‘í•˜ì„¸ìš”. ê°œë°œ ë„êµ¬ ë° í…œí”Œë¦¿ì„ ì‚¬ìš©í•˜ì—¬ í™•ì¥ì„ ë¹Œë“œí•˜ê³  Marketplaceì— ê²Œì‹œí•˜ì„¸ìš”.","category":"ê¸°íƒ€ ë„êµ¬ ì§‘í•©","keywords":["í™•ì¥ì„±","í™•ì¥","í”ŒëŸ¬ê·¸ ì¸","ì¶”ê°€ ê¸°ëŠ¥"]},{"language":"pl-pl","title":"Programowanie rozszerzeÅ„ programu Visual Studio","description":"TwÃ³rz dodatki i rozszerzenia dla programu Visual Studio, w tym nowe polecenia, analizatory kodu i okna narzÄ™dzi.","longDescription":"Rozpocznij rozszerzanie programu Visual Studio przy pomocy zestawu SDK programu Visual Studio. UÅ¼yj narzÄ™dzi i szablonÃ³w programistycznych, aby tworzyÄ‡ rozszerzenia i publikowaÄ‡ je w portalu Marketplace.","category":"Inne zestawy narzÄ™dzi","keywords":["rozszerzalnoÅ›Ä‡","rozszerz","wtyczka","dodatek"]},{"language":"pt-br","title":"Desenvolvimento de extensÃ£o do Visual Studio","description":"Crie suplementos e extensÃµes para Visual Studio, incluindo novos comandos, analisadores de cÃ³digo e janelas de ferramentas.","longDescription":"Comece a ampliar o Visual Studio com a ajuda do SDK do Visual Studio. Use os modelos e as ferramentas de desenvolvimento para criar extensÃµes e publicar no Marketplace.","category":"Outros conjuntos de ferramentas","keywords":["extensibilidade","estender","plug-in","complemento"]},{"language":"ru-ru","title":"Ğ Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ° Ñ€Ğ°ÑÑˆĞ¸Ñ€ĞµĞ½Ğ¸Ğ¹ Visual Studio","description":"Ğ¡Ğ¾Ğ·Ğ´Ğ°Ğ²Ğ°Ğ¹Ñ‚Ğµ Ğ½Ğ°Ğ´ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ¸ Ğ¸ Ñ€Ğ°ÑÑˆĞ¸Ñ€ĞµĞ½Ğ¸Ñ Ğ´Ğ»Ñ Visual Studio, Ğ²ĞºĞ»ÑÑ‡Ğ°Ñ Ğ½Ğ¾Ğ²Ñ‹Ğµ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ñ‹, Ğ°Ğ½Ğ°Ğ»Ğ¸Ğ·Ğ°Ñ‚Ğ¾Ñ€Ñ‹ ĞºĞ¾Ğ´Ğ° Ğ¸ Ğ¾ĞºĞ½Ğ° Ğ¸Ğ½ÑÑ‚Ñ€ÑƒĞ¼ĞµĞ½Ñ‚Ğ¾Ğ².","longDescription":"ĞĞ°Ñ‡Ğ½Ğ¸Ñ‚Ğµ Ñ€Ğ°ÑÑˆĞ¸Ñ€ĞµĞ½Ğ¸Ğµ Visual Studio Ñ Ğ¿Ğ¾Ğ¼Ğ¾Ñ‰ÑŒÑ Ğ¿Ğ°ĞºĞµÑ‚Ğ° SDK Ğ´Ğ»Ñ Visual Studio. Ğ˜ÑĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒĞ¹Ñ‚Ğµ ÑÑ€ĞµĞ´ÑÑ‚Ğ²Ğ° Ğ¸ ÑˆĞ°Ğ±Ğ»Ğ¾Ğ½Ñ‹ Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ¸ Ğ´Ğ»Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ñ Ñ€Ğ°ÑÑˆĞ¸Ñ€ĞµĞ½Ğ¸Ğ¹ Ğ¸ Ğ¸Ñ… Ğ¿ÑƒĞ±Ğ»Ğ¸ĞºĞ°Ñ†Ğ¸Ğ¸ Ğ² Marketplace.","category":"Ğ”Ñ€ÑƒĞ³Ğ¸Ğµ Ğ½Ğ°Ğ±Ğ¾Ñ€Ñ‹ Ğ¸Ğ½ÑÑ‚Ñ€ÑƒĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²","keywords":["Ñ€Ğ°ÑÑˆĞ¸Ñ€ÑĞµĞ¼Ğ¾ÑÑ‚ÑŒ","Ñ€Ğ°ÑÑˆĞ¸Ñ€Ğ¸Ñ‚ÑŒ","Ğ¿Ğ¾Ğ´ĞºĞ»ÑÑ‡Ğ°ĞµĞ¼Ñ‹Ğ¹ Ğ¼Ğ¾Ğ´ÑƒĞ»ÑŒ","Ğ½Ğ°Ğ´ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ°"]},{"language":"tr-tr","title":"Visual Studio UzantÄ±sÄ± geliÅŸtirme","description":"Visual Studio iÃ§in yeni komutlar, kod Ã§Ã¶zÃ¼mleyicileri ve araÃ§ pencereleri gibi eklenti ve uzantÄ±lar oluÅŸturun.","longDescription":"Visual Studio SDK'sÄ±nÄ±n yardÄ±mÄ±yla Visual Studio'yu geniÅŸletmeye baÅŸlayÄ±n. UzantÄ±lar oluÅŸturmak ve Market'te yayÄ±mlamak iÃ§in geliÅŸtirme araÃ§larÄ±nÄ± ve ÅŸablonlarÄ± kullanÄ±n.","category":"DiÄŸer AraÃ§ TakÄ±mlarÄ±","keywords":["geniÅŸletilebilirlik","geniÅŸlet","eklenti","eklenti"]}]}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Ü»r  	    @           ¤– ÏÛù ;ÚœÛm0Á®êòf3  µ4òƒfrîêÃ0e  
+ıãô¼¸¾€  –    ìç*ği<ú!ó  UK÷Øjƒ>¾Ç/…¨   ûæ+ã*\¨ê¥   7Ç+UX?OÍ·ÇÿŒ   }Ëøiì]ÜícÓ{   #7oE’êZzf¨²ép  'v§ø=5ÁvÀ™  'Ë
+û‘±VıƒÃ	  ,Ò‘@~öÊÂU)Ñ¡Á   -sÍ­h¤<4‡é?1.   8œâÇ²štA\ó}ï   :LY˜ T gàBíŸ  :…SBàÌ1Ï"AY   ;q¥Ì0ÁÂ—:
+»Â   <LF/\Í«Ÿ£   =$K¨(˜âB¦E ;   D˜‘¤!c â•'·<   E,­ KÈ}g¢#ë‚2   FN"ŞxO l]ˆpÍ   GGîãF ï®İu¼	   J)ÙÅø$7Ëˆµ£û   PyÅf,ĞÍ™W   c‰J+ëOšm!µWS™   i×õŞ1Ûw¶\ “ˆ<   j9
+3 šÑ@Gú'Ïy   nÏ%4ğô¨÷²ğÁì  vk>ë@VLä°¦?   vıøk ¶ZµĞ_çÙ    |ÄXcÔ6Zz`†÷œ%¹  }c´—™»3üÖ   €¢6š,¸=îN’BUg<   €³ìké½8Ğj•%   …vôÛ£ğ»ßƒbsM   ‹%UºËéÎ¥ã§   •{:£¬²H¿õ(ÜL    –ü07U§‡e&?'V  ™6»ÿ&é~(Î^¢{V   ¢â{qsqRÅi¯d   ¨
+IŠä £ĞƒB=   «ˆºÿÏ‰4™\„´Â   ¬8d<J®·ºÎ´‚ê   ³#‰[,D7]b:9   ³ì¥XBy±²¸É   ´ÛÛ…íˆ%í¼¶çC   µr«\ƒ®ş‚Üm   ¼°Dèbk¿+æ,   ½x Ù¼ê½‡€uˆX'   ¾ÍñÉ”Ğ]ŠÂÆH¹   Á{¡yßdQÑi,(l\   ÃÑ&\Ò?µ€ãH¨   ÉHÙcŠeİ?Ã–   É{Ğ£îŸ­Ğ¥fF<   ĞÆÔ@GïÛm¦‡©İ   Ô!Ç'õk©0Íy0   ×IRK[  z¢TîÙ   ×†òÁy®¯ñ›„Äd   ØDŸ±Û1TÔ£ükfÔ   Ú,úìL)Ğš«ùg   Üˆ
+é„‚¿8—:	«   ß{äf‚à36º/Çêğ   ßéXüÁü€€ßä+¼    à<Œ‘);UK	uãÇ   áipZ«µåÊäQ9   ãâáğZ»yRPçıf  éõu'È3&ií¬Õ\   ñ:¶¥a÷ åÏ˜A*   ôĞ;<íùéjÔ ÚÕ  õ¡ãş6D@+I/áˆP   öÆœæøâåĞ[òÍ    öèâì[ÉéĞ¾ŸBD   ö÷ŞbZ»'B·Z‰½   øAÚ¾í29ÉNZ   ù?ûánËÄ¾ï gk   ûï#¼±…ÅÀ¼tÖ5Û   ü“¸®ušuü¿Ü*	   ş‚Óö	kE„Ë±Yl8   ş§cÒÕ¿³‹®b¬ $ƒÖ|•ĞØNù   ëÌÑ©¾CğÔ‚  ÍFc‹\S\½
+l¨  
+|ØÕKßĞÎ²ï?  ıãô¼¸¾À  –   _8R öX¤‡Ìf  Â|²z’ØŠk©2½  †”6!Áè
+½  "¶Õ%Š <D*QIˆL  %Á¤Bmáş¼´¬ØC  &šSäó(L	Ò/#Ë  )ˆ;~/<v€ò×åÍ  )¬êß€Â»ºÁ|º*  <HmD°‘Ùä|yÔ  Fü×2‹–HHÃ°w"  G]ÃLıç¾gaX<7 J‚$ÊÁàhx¹ë  J«c0Æô¥©Ğ˜ÄR  KKù %©7»ĞÄ)‘  K›Á—1[Á¼äv”b  T”Kº}AÀfˆ4^   XãÏzáIÜ0ü;  [<?ÃF@ê@ºPW£%  [Ñ"“ó:J§´^¬j  ^['˜¦ª2Ao1ş  _@lTóägù\=°`é  d¾c9õÀve¤¼aî  mœ»w@7ÃAWĞx-  n,jí›Í% »Ùu'  u–\7uúW¼àìç   vñc™m7¥JĞª'Û x©$m?û5ÖÖ‚©iL,  ~t×Í³çlĞ„±´P  Ş$Ââù0¿ÒvÁ   ãdÓW€ÇĞ©å™J  Šoö·)ÃÂwZBª_  Œ¾èØ$WĞ½ÊÂ`  ’á§? óÒÍz_Üf  œ‰O„*ïUÄpW& êÈºƒ{+¥„M¥û`  ñvÄ¶Ûs WZ	d'   áv0CÏ½2|¬>¼  ¡M›DåùvU*s
+  ¨˜ÿÑÙßyÏ4çÂÇ'Ü «—¬tÓ—ı?Ğeyyš  ³¹z/nĞÄÏºÊ   ³ìs:§JHÑæ¬‹ ål ¶ãö.6OÖa\  ¾şgôz»§Ğ×w£\  ¿&3ZĞÙU¤ÏL@  ÄÃ©ëM—;(,¦ß(  Ò³7‚C:rÊä›ë  Õ2­ÍW»†…ïèN  ÖÅc—3›Òİxë¸G  ×Äøº˜İÙ¿n#üP  Şâºfä 3¬  ßnáŞÕöl½K¿  éIòq—äæ¾_ëg+  é¾ãÎ–ú<¸vpKM?  íKímÃ©ñ†»ş  ï›1·£Ş.Z."={¨  øA0C6/Eu„š  ÿ·Pí6ŒÍ•hpÎ]-  ÿìÀºRÅƒZo)A=  L´€ìsĞĞØ(Öï   Lnğµ2îÍ¾*  HìŠò•îº	  ıãô¼¸¾   –   	¤„Sâ:³¬É{¹  ç%ÃğÙ:±½Èƒ  $VÛİŠîz·‹Ò3 ~5–­_9Gbz Ü‘  Õ–º¾õâÜÎ§­»–%  —‰Øß/¿sm :±  )v5eÓñÀ>yL   ,ôn°—ENÉ
+ü¿ÇF  .†Ü¯‹FÏíĞhU×`  /¸6œêJĞmE‘Ñ   3ø×mM¹á|lW  5Çk4
+«úºlêc  : ³—4”¬’ å >Ş`s/×Á4¶&  >p†åËädãà¿N H¯7ğ³æ ¾+z(ì  Lu3œğ!·‡„Ğ  O°apç¥ÚP-îÆa	 RC^D;ƒéY«JM  WkÈ„opĞsÜÓÁ   cë}áqXÀ&ê  iÕüü,¡5!²oUÑ  o|_¤ˆdh>L Ë¼^  p&Vñ£múeâ7xæ  zp‡öÑÿ ¯i1¢â¾  Š	2¶„Cë¬`½Ê]  Œ|Ì³h`ŠyÒs  Å}ÀŠO»xPwì  È(æÊcpˆĞF°  “²®ÛNW²a¬ñİ  ’G2`§­ÀyĞ<àÈ   —Ï
