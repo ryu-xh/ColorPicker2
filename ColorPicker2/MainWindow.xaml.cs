@@ -624,10 +624,11 @@ namespace ColorPicker2 {
 
         string domain = "https://ryuusei.io";
         string projectName = "ColorPicker2";
-        string applicationID = "b77a5c561934e089";
+        
         private void InfoButton_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            string updateLink = domain + "/" + projectName + "/Info.html?applicationID" + applicationID + "&version=" + version;
+            string updateLink = domain + "/" + projectName + "/Info.html?version=" + version;
+            // string updateLink = domain + "/" + projectName;
 
             Process.Start(@updateLink);
         }

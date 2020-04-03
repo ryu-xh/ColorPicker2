@@ -4,3 +4,4 @@
 
 /.vs/ColorPicker2/v15/Server/sqlite3
 *.sqlite
+*.pfx
